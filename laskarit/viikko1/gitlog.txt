@@ -1,0 +1,133 @@
+laupalo@melkki:~/ot_viikko1/tiedostoja$ git log --stat | cat
+commit ca33d03c09a089def03bf3c53c720f35584724f7
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 12:07:42 2022 +0200
+
+    file2 on nyt file22
+
+ tiedostoja/file22.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 22964e6b9c421767fbed2c1b7b11e22e7900358a
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 12:07:01 2022 +0200
+
+    poistettu file1 ja uudelleennimetty file2
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 4f16f48dccd39dbfd4aeb9c1c408c0e2dfd0e84a
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 12:02:16 2022 +0200
+
+    luotu kansio ja tiedostoja
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c43fbcfdfa06e7d781b5cf6befdb9ffdf01c7f86
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:26:01 2022 +0200
+
+    lisätty ja poistettu tekstiä ekasta ja kolmannesta
+
+ eka.txt    | 6 ++----
+ kolmas.txt | 3 ++-
+ 2 files changed, 4 insertions(+), 5 deletions(-)
+
+commit 59eedc7fc316dfec20be6cbfd7718add5c8700b2
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:22:43 2022 +0200
+
+    lisätty tiedostoon kolmas.txt sisältöä joka jäi tehtävässä 6 tekemättä
+
+ kolmas.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 7e6eac161dc425cd49e56f9283a662353712efc8
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:21:30 2022 +0200
+
+    poistettu vaingossa luotu tiedosto kolmax.txt
+
+ kolmax.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit c98cc78d644e5d5c293d173963ae01c0b5f74392
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:13:39 2022 +0200
+
+    muutettu tiedoston nimi
+
+ tiedosto.txt => eka.txt | 0
+ toinen.txt              | 1 -
+ 2 files changed, 1 deletion(-)
+
+commit 5d0eb97145bc8a2cf85b60cbefd1a5b3fb42977e
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:09:55 2022 +0200
+
+    tiedostosta poistettiin ja lisättiin tekstiä
+
+ tiedosto.txt | 24 +++++++++++-------------
+ 1 file changed, 11 insertions(+), 13 deletions(-)
+
+commit a59cbae0dc6d6f9f2193e5a698c953c9a59e53fe
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:07:38 2022 +0200
+
+    tiedostoon lisätty tekstiä
+
+ tiedosto.txt | 113 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 113 insertions(+)
+
+commit 140da1ad7b4b18591c611d37158bfa47bcb41a3f
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:02:04 2022 +0200
+
+    luotu stuff kansio ja jokintiedosto.txt
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2fc5a0209cc1e0b5a7fd3bb03a6f46f767e962ed
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 11:00:46 2022 +0200
+
+    Muutettiin toinen.txt ja kolmas.txt sisältöä
+
+ kolmax.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 984b2e3bd8767d176d7c6c793ce76be9ab82ed12
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Sat Nov 5 10:57:59 2022 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit d3ab0e8abd585bc4d23f9b1fdee0c81d7d32663e
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Thu Nov 3 09:41:38 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 79b86eab23090c0d51d0aef688d2f9631bd6eb4d
+Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
+Date:   Thu Nov 3 09:39:36 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
