@@ -4,4 +4,5 @@ jonka vuoksi tein lopussa poistoja ja muokkauksia, jotta lopputulos näyttäisi 
 
 ## Viikko 1
 [gitlog.txt](https://github.com/lauurap/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+
 [komentorivi.txt](https://github.com/lauurap/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
