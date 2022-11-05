@@ -5,7 +5,6 @@ jonka vuoksi tein lopussa poistoja ja muokkauksia, jotta lopputulos näyttäisi 
 ## Tehtävät
 
 ### Viikko 1
-Klikkaamalla alla olevia linkkejä pääset näkemään tulosteet.
 
 [gitlog.txt](https://github.com/lauurap/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
