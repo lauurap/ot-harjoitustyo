@@ -1,3 +1,5 @@
+Tässä tuloste:
+
 laupalo@melkki:~/ot_viikko1/tiedostoja$ git log --stat | cat
 commit ca33d03c09a089def03bf3c53c720f35584724f7
 Author: Palo Laura M <laupalo@melkki.cs.helsinki.fi>
