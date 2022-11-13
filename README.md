@@ -18,3 +18,6 @@ jonka vuoksi tein lopussa poistoja ja muokkauksia, jotta lopputulos näyttäisi 
 [Testikattavuusraportti1](https://github.com/lauurap/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusraportti1.PNG)
 
 [Testikattavuusraportti2](https://github.com/lauurap/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusraportti2.PNG)
+
+## Harjoitustyö
+[vaatimusmaarittely.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
