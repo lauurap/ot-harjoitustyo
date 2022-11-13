@@ -21,3 +21,4 @@ jonka vuoksi tein lopussa poistoja ja muokkauksia, jotta lopputulos näyttäisi 
 
 ## Harjoitustyö
 [vaatimusmaarittely.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[työaikakirjanpito.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
