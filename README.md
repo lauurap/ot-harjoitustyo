@@ -39,7 +39,3 @@ Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa.
 
 [Testikattavuusraportti2](https://github.com/lauurap/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuusraportti2.PNG)
 
-## Harjoitustyö
-[vaatimusmaarittely.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
-
-[työaikakirjanpito.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)

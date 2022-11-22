@@ -6,3 +6,4 @@
 | 17.11 | 2 | risnolla-luokan tilalle index.py, player ja board-luokkien aloitus |
 | 18.11 | 1 | laudan teko ja käyttäjän nimen määrittely |
 | 20.11 | 1,5 | testien kirjoittaminen |
+| 22.11 | 1 | invoke ja changelog |
