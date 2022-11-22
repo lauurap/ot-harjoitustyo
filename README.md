@@ -4,7 +4,7 @@
 
 Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa. Tarkoitus on, että pelissä pystyy valitsemaan, pelaako toista ihmistä vai konetta vastaan. Pelissä olisi tarkoitus myös päästä valitsemaan pelilaudan koko. Vielä nyt peli on pahasti kesken.
 
-## Python-versio
+### Python-versio
 
 Harjoitustyö on testattu Python 3.8 -versiolla
 
