@@ -24,7 +24,7 @@ Harjoitustyö on testattu Python 3.8 -versiolla
  
 3. poetry run invoke start käynnistää ristinolla-pelin
 
-## Komentorivitoiminnot
+### Komentorivitoiminnot
 
 1. poetry run invoke start käynnistää ristinolla-pelin
 
