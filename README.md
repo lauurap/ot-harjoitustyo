@@ -6,6 +6,12 @@ Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa.
 
 ### Dokumentaatio
 
+[changelog.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+[tyoaikakirjanpito.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+[vaatimusmaarittely.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 ### Asennus
 
 1. poetry install asentaa riippuvuudet
