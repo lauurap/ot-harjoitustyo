@@ -19,10 +19,8 @@ Harjoitustyö on testattu Python 3.8 -versiolla
 ### Asennus
 
 1. poetry install asentaa riippuvuudet
-
-2. poetry run invoke build suorittaa alustustoimenpiteet
  
-3. poetry run invoke start käynnistää ristinolla-pelin
+2. poetry run invoke start käynnistää ristinolla-pelin
 
 ### Komentorivitoiminnot
 
