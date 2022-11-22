@@ -1,6 +1,20 @@
 # Ohjelmistotekniikka, harjoitustyö
-Viikon 1 **tehtävää 6** tehdessäni kirjoitin sanan *kolmas* sanana *kolmax*,
-jonka vuoksi tein lopussa poistoja ja muokkauksia, jotta lopputulos näyttäisi jotakuinkin oikealta. 
+
+## Ristinolla
+
+Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa.
+
+### Dokumentaatio
+
+### Asennus
+
+1. poetry install asentaa riippuvuudet
+
+2. poetry run invoke start käynnistää ristinolla-pelin
+
+3. poetry run invoke test suorittaa testit
+
+4. poetry run invoke coverage_report kerää testikattavuuden ja muodostaa HTML-raportin
 
 ## Tehtävät
 

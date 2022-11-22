@@ -1,2 +1,2 @@
 ```mermaid
-classDiagram
+ classDiagram
