@@ -2,7 +2,7 @@
 
 ## Ristinolla
 
-Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa.
+Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa. Tarkoitus on, että pelissä pystyy valitsemaan, pelaako toista ihmistä vai konetta vastaan. Pelissä olisi tarkoitus myös päästä valitsemaan pelilaudan koko. Vielä nyt peli on pahasti kesken.
 
 ### Dokumentaatio
 
