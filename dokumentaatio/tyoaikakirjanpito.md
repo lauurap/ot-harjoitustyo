@@ -7,3 +7,7 @@
 | 18.11 | 1 | laudan teko ja käyttäjän nimen määrittely |
 | 20.11 | 1,5 | testien kirjoittaminen |
 | 22.11 | 1 | invoke ja changelog |
+| 26.11 | 3 | board-luokan set_mark ja check_board_full -> peli toimii nyt yksinkertaisesti |
+
+
+Aika yht 12,5
