@@ -1,11 +1,13 @@
 from board import Board
 from player import Player
+from humanplayer import Humanplayer
 
 class Game:
 
 	def __init__(self):
 		print("\nAloitetaan uusi peli! \n")	
-		#self.board = Board()
+		self.board = Board()
+
 		
 
 	def start_game(self):
@@ -24,13 +26,23 @@ class Game:
 			else:
 				createname2=False
 		print("Tervetuloa pelaamaan", name1, "ja", name2,"!\n")
-		self.player1 = Player(name1)
-		self.player2 = Player(name2)
-		board = Board()
+		self.player1 = Humanplayer(name1, 'X')
+		self.player2 = Humanplayer(name2, 'O')
+		#board = Board()
 		
 
 	def play_game(self):
 		#joku while tähän
-		print("Aloitetaan pelaaminen! Mutta ehkä vasta ensi viikolla...")
-		#self.player1.set_mark(board)
+		print("Aloitetaan pelaaminen!")
+		#win = False
+		while self.board.check_board_full() == False:
+			mark = input("Anna asetettava merkki: \n")
+			place = int(input("Mihin paikkaan haluat merkin asettaa? \n"))
+			self.board.set_mark(mark,place)
+			#self.player.make_move(game)
+			self.board.print_board()
+			self.board.check_board_full()
+
+	def give_board():
+		return this.board
 		
