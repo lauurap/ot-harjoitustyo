@@ -8,6 +8,6 @@
 | 20.11 | 1,5 | testien kirjoittaminen |
 | 22.11 | 1 | invoke ja changelog |
 | 26.11 | 3 | board-luokan set_mark ja check_board_full -> peli toimii nyt yksinkertaisesti |
+| 27.11 | 2 | pelin toiminnallisuuden parantaminen -> vuoro vaihtuu oikein |
 
-
-Aika yht 12,5
+Aika yht 14,5
