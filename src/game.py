@@ -32,16 +32,28 @@ class Game:
 		
 
 	def play_game(self):
-		#joku while tähän
-		print("Aloitetaan pelaaminen!")
-		#win = False
-		while self.board.check_board_full() == False:
-			mark = input("Anna asetettava merkki: \n")
-			place = int(input("Mihin paikkaan haluat merkin asettaa? \n"))
-			self.board.set_mark(mark,place)
-			#self.player.make_move(game)
-			self.board.print_board()
-			self.board.check_board_full()
+		print("Aloitetaan pelaaminen! \n")
+		vuoro=1
+		while self.board.check_board_full() == False: 
+			while vuoro==1 and self.board.check_board_full() == False:
+				print("Vuorossa on", self.player1.name, "\n Aseta merkkisi", self.player1.mark, "ruutuun 1-9\n ")
+				place = int(input("Mihin paikkaan haluat merkin asettaa? \n"))
+				if self.board.set_mark(self.player1.mark,place) == True:
+					vuoro=2
+				self.board.print_board()
+				
+					
+			while vuoro ==2 and self.board.check_board_full() == False:
+				print("Vuorossa on", self.player2.name, "\n Aseta merkkisi", self.player2.mark, "ruutuun 1-9\n ")
+				place = int(input("Mihin paikkaan haluat merkin asettaa? \n"))
+				if self.board.set_mark(self.player2.mark,place) == True:
+					vuoro=1
+				self.board.print_board()
+		if self.board.check_board_full() == True:
+			print("Peli loppui! Tasapeli!")
+		
+				
+				
 
 	def give_board():
 		return this.board

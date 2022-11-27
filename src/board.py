@@ -14,29 +14,27 @@ class Board:
 		print("-----------")
 		print(" %s | %s | %s " %(self.numbers[7], self.numbers[8], self.numbers[9]))
 		print(" ")
+
 	def set_mark(self,mark, place):
 		success = False
 		while success == False:
 			if place<1 or place>9:
 				print("Merkki tulee asettaa johonkin ruuduista 1-9!")
 			else:
-				success2 = False
-				while success2 == False:
-					if self.numbers[place]=='X' or self.numbers[place]=='O':
-						print("Merkki tulee asetta vapaalle ruudulle!")
-						success2=True
+				if self.numbers[place]=='X' or self.numbers[place]=='O':
+					print("Merkki tulee asetta vapaalle ruudulle!")
+					break
 
-					if self.numbers[place]!='O' and self.numbers[place]!='X':
-						self.numbers[place]=mark
-							
-						success2 = True
-						break
-			success = True
+				if self.numbers[place]!='O' and self.numbers[place]!='X':
+					self.numbers[place]=mark
+					success=True
+
+		return success
 						
 
 	
 	#def check_win(self):
-		
+		#if self.numbers[1]==self.numbers[2] and self.numbers[2]==self.numebs[3]:
 
 	def check_board_full(self):
 		marks = 0
@@ -45,7 +43,6 @@ class Board:
 			if self.numbers[i]=='O' or self.numbers[i]=='X':
 				marks+=1
 		if marks==9:
-			print("Peli loppui! Tasapeli!")
 			status = True
 		return status
 			
