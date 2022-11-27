@@ -20,6 +20,7 @@ class Board:
 		while success == False:
 			if place<1 or place>9:
 				print("Merkki tulee asettaa johonkin ruuduista 1-9!")
+				break
 			else:
 				if self.numbers[place]=='X' or self.numbers[place]=='O':
 					print("Merkki tulee asetta vapaalle ruudulle!")
@@ -33,8 +34,16 @@ class Board:
 						
 
 	
-	#def check_win(self):
-		#if self.numbers[1]==self.numbers[2] and self.numbers[2]==self.numebs[3]:
+	def check_win(self):
+		win = False
+		for i in range(3):
+			if self.numbers[i*3+1]==self.numbers[i*3+2] and self.numbers[i*3+2]==self.numbers[i*3+3]:
+				win = True
+			if self.numbers[i+1]==self.numbers[i+1+3] and self.numbers[i+1+3]==self.numbers[i+1+6]:
+				win = True
+		if self.numbers[1]==self.numbers[5] and self.numbers[5]==self.numbers[9] or self.numbers[3]==self.numbers[5] and self.numbers[5]==self.numbers[7]:
+			win = True
+		return win
 
 	def check_board_full(self):
 		marks = 0
