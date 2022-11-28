@@ -7,7 +7,7 @@ class Board:
         print("Tässä on pelilauta: \n")
         self.print_board()
 
-    def print_board(self):  # taulun printtaus otettu https://www.youtube.com/watch?v=7Djh-Cbgi0E
+    def print_board(self):
         print(" ", self.numbers[1], "|", self.numbers[2], "|", self.numbers[3])
         print("-----------")
         print(" ", self.numbers[4], "|", self.numbers[5], "|", self.numbers[6])

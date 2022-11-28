@@ -8,12 +8,12 @@ class TestGame(unittest.TestCase):
         print("Set up goes here")
 
     def test_constructor_set_name_correct(self):
-        player = Player("Matti")
+        player = Player("Matti", "X")
         self.assertEqual(player.name, "Matti")
 
     def test_players_cant_have_same_name(self):  # tarkista onko järkeä
-        player1 = Player("Hello")
-        player2 = Player("Hello")
+        player1 = Player("Hello", "X")
+        player2 = Player("Hello", "O")
         self.assertEqual(player1.name, player2.name)
 
     # def test_player_must_have_name(self): #tarkista onko järkeä
