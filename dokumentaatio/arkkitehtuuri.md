@@ -1,4 +1,4 @@
-
+```mermaid
  classDiagram
       Board <|-- Game
       Humanplayer <|-- Game
@@ -18,3 +18,4 @@
           name
           mark
       }
+```
