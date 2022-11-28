@@ -9,5 +9,6 @@
 | 22.11 | 1 | invoke ja changelog |
 | 26.11 | 3 | board-luokan set_mark ja check_board_full -> peli toimii nyt yksinkertaisesti |
 | 27.11 | 5,5 | pelin toiminnallisuuden parantaminen -> vuoro vaihtuu oikein ja voittaja löytyy, koodin parantaminen pylintin avulla |
+| 28.11 | 2 | arkkitehtuuri |
 
-Aika yht 18
+Aika yht 20
