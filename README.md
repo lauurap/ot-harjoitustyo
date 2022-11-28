@@ -16,6 +16,8 @@ Harjoitustyö on testattu Python 3.8 -versiolla
 
 [vaatimusmaarittely.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
+[arkkitehtuuri.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 ### Asennus
 
 1. poetry install asentaa riippuvuudet
