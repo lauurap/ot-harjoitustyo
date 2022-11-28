@@ -1,4 +1,3 @@
 class Computerplayer:
-    def __init__(self, name, mark):
-        self.name = name
+    def __init__(self, mark):
         self.mark = mark

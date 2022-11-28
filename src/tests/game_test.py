@@ -1,21 +1,15 @@
 import unittest
 from game import Game
-from player import Player
+from humanplayer import Humanplayer
 
 
 class TestGame(unittest.TestCase):
     def setUp(self):
         print("Set up goes here")
 
-    def test_constructor_set_name_correct(self):
-        player = Player("Matti", "X")
-        self.assertEqual(player.name, "Matti")
 
     def test_players_cant_have_same_name(self):  # tarkista onko järkeä
         player1 = Player("Hello", "X")
         player2 = Player("Hello", "O")
         self.assertEqual(player1.name, player2.name)
 
-    # def test_player_must_have_name(self): #tarkista onko järkeä
-    # player=Player("")
-    #	self.assertEqual(player.name, "Nimessä pitää olla ainakin yksi merkki!")
