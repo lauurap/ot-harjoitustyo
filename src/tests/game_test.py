@@ -1,15 +1,18 @@
 import unittest
 from game import Game
+from board import Board
 from humanplayer import Humanplayer
 
 
 class TestGame(unittest.TestCase):
     def setUp(self):
-        print("Set up goes here")
+        self.game = Game()
+        self.board = Board()
+        self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
     def test_players_cant_have_same_name(self):  # tarkista onko järkeä
-        player1 = Player("Hello", "X")
-        player2 = Player("Hello", "O")
-        self.assertEqual(player1.name, player2.name)
+        humanplayer1 = Humanplayer("Hello", "X")
+        humanplayer2 = Humanplayer("Hello", "O")
+        self.assertEqual(humanplayer1.name, humanplayer2.name)
 
