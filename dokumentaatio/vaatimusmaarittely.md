@@ -4,7 +4,7 @@ Tarkoitus on tehdä ristinolla ensin vakiokokoisella pelilaudalla 3x3 TEHTY, ja 
 
 ## Käyttäjiä ovat:
 - Ihmiskäyttäjä TEHTY
-- Konekäyttäjä (jolloin peliä voi pelata konetta vastaan)
+- Konekäyttäjä (jolloin peliä voi pelata konetta vastaan) TEHTY
 
 ## Käyttöliittymä:
 Pelissä on vain 1 näkymä, joka näkyy samanaikaisesti kummallekkin pelaajalle.
@@ -12,12 +12,12 @@ Pelissä on vain 1 näkymä, joka näkyy samanaikaisesti kummallekkin pelaajalle
 ## Toiminnallisuudet:
 ### Ihmiskäyttäjä:
 	(- valitsee pelilaudan koon)
-	- valitsee vastustajan (toinen ihminen / kone)
+	- valitsee vastustajan (toinen ihminen / kone) TEHTY
 	- valitsee omat siirtonsa TEHTY
 	- mahdollisuus keskeyttää peli ja jatkaa sitä myöhemmin (tallennus)
 
 ### Konekäyttäjä:
-	- valitsee randomilla siirtonsa (mahdollisesti valitsee "järkevästi" siirtonsa)
+	- valitsee randomilla siirtonsa TEHTY (mahdollisesti valitsee "järkevästi" siirtonsa)
 
 
 ## Jatkokehitysideoita:
