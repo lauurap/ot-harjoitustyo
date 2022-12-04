@@ -14,6 +14,62 @@ class TestBoard(unittest.TestCase):
         self.board.set_mark('X', 1)
         self.assertEqual(self.board.numbers[1], 'X')
 
+    def test_check_win_first_row(self):
+        self.board.set_mark('X', 1)
+        self.board.set_mark('X', 2)
+        self.board.set_mark('X', 3)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_check_win_second_row(self):
+        self.board.set_mark('X', 4)
+        self.board.set_mark('X', 5)
+        self.board.set_mark('X', 6)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_check_win_third_row(self):
+        self.board.set_mark('X', 7)
+        self.board.set_mark('X', 8)
+        self.board.set_mark('X', 9)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_check_win_first_column(self):
+        self.board.set_mark('X', 1)
+        self.board.set_mark('X', 4)
+        self.board.set_mark('X', 7)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_check_win_second_column(self):
+        self.board.set_mark('X', 2)
+        self.board.set_mark('X', 5)
+        self.board.set_mark('X', 8)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_check_win_third_column(self):
+        self.board.set_mark('X', 3)
+        self.board.set_mark('X', 6)
+        self.board.set_mark('X', 9)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_check_win_diagonal1(self):
+        self.board.set_mark('X', 1)
+        self.board.set_mark('X', 5)
+        self.board.set_mark('X', 9)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_check_win_diagonal2(self):
+        self.board.set_mark('X', 3)
+        self.board.set_mark('X', 5)
+        self.board.set_mark('X', 7)
+        self.assertEqual(self.board.check_win(), True)
+
+    def test_do_turn_return_false_if_board_full(self):
+        for i in range(1, 10):
+            self.board.set_mark('X', i)
+        self.assertEqual(self.board.do_turn('O'), False)
+
+    def test_do_turn_return_true_if_board_notfull(self):
+        self.assertEqual(self.board.do_turn('O'), True)
+
     def test_constructor_set_mark_correct(self):
         self.assertEqual(self.board.set_mark('X', 7), True)
 
