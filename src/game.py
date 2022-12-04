@@ -16,18 +16,21 @@ class Game:
                 print("Nimessä pitää olla ainakin yksi merkki!")
             else:
                 createname = False
-        createname2 = True
-        while createname2 is True:
-            name2 = input("Anna pelaajan 2 nimi ")
-            if name2 in ('', ' ', name1):
-                print(
-                    "Nimi ei saa olla tyhjä eikä se saa olla sama kuin toisen pelaajan nimi!")
-            else:
-                createname2 = False
-        print("Tervetuloa pelaamaan", name1, "ja", name2, "!\n")
-        self.player1 = Humanplayer(name1, 'X')
-        self.player2 = Humanplayer(name2, 'O')
-        #board = Board()
+                self.player1 = Humanplayer(name1, 'X')
+        response = input("Pelaatko konetta vastaan? ei/kyllä ")
+        if response == "ei":
+            createname2 = True
+            while createname2 is True:
+                name2 = input("Anna pelaajan 2 nimi ")
+                if name2 in ('', ' ', name1):
+                    print(
+                        "Nimi ei saa olla tyhjä eikä se saa olla sama kuin toisen pelaajan nimi!")
+                else:
+                    createname2 = False
+                    print("Tervetuloa pelaamaan", name1, "ja", name2, "!\n")
+                    self.player2 = Humanplayer(name2, 'O')
+        if response == "kyllä":
+            self.player2 = Computerplayer('O')
 
     def play_game(self):
         print("Aloitetaan pelaaminen! \n")

@@ -1,6 +1,7 @@
 import unittest
 from humanplayer import Humanplayer
 
+
 class TestHumanplayer(unittest.TestCase):
     def setUp(self):
         print("Set up goes here")

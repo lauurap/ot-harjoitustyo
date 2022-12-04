@@ -1,6 +1,7 @@
 import unittest
 from computerplayer import Computerplayer
 
+
 class TestComputerplayer(unittest.TestCase):
     def setUp(self):
         print("Set up goes here")
