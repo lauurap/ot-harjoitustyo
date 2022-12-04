@@ -11,6 +11,6 @@
 | 27.11 | 5,5 | pelin toiminnallisuuden parantaminen -> vuoro vaihtuu oikein ja voittaja löytyy, koodin parantaminen pylintin avulla |
 | 28.11 | 2 | arkkitehtuuri |
 | 29.11 | 1 | testejä |
-| 4.12 | 2 | konepelaaja |
+| 4.12 | 2 | konepelaaja ja testejä|
 
 Aika yht 23
