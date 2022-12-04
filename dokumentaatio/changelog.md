@@ -10,3 +10,6 @@
 - Peli loppuu tasapeliin, jos lauta on täynnä
 - Peli loppuu, jos toinen pelaaja voittaa ja voittaja tunnistetaan
 - Peli toimii nyt kahden ihmispelaajan kanssa oikein (vuoro ei vaihdu, vaikka pelaaja yrittää laittaa merkin väärään kohtaan)
+
+## Viikko 5
+- Tehty konepelaaja
