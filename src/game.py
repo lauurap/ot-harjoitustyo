@@ -1,5 +1,6 @@
 from board import Board
 from humanplayer import Humanplayer
+from computerplayer import Computerplayer
 
 
 class Game:
@@ -45,15 +46,26 @@ class Game:
                 self.board.print_board()
 
             while vuoro == 2 and self.board.check_board_full() is False and self.board.check_win() is False:
-                print("Vuorossa on", self.player2.name,
-                      "\n Aseta merkkisi", self.player2.mark, "ruutuun 1-9\n ")
-                place = int(input("Mihin paikkaan haluat merkin asettaa? \n"))
-                if self.board.set_mark(self.player2.mark, place) is True:
-                    vuoro = 1
-                self.board.print_board()
+                if isinstance(self.player2, Humanplayer) is True: 
+                    print("Vuorossa on", self.player2.name,
+                          "\n Aseta merkkisi", self.player2.mark, "ruutuun 1-9\n ")
+                    place = int(
+                        input("Mihin paikkaan haluat merkin asettaa? \n"))
+                    if self.board.set_mark(self.player2.mark, place) is True:
+                        vuoro = 1
+                    self.board.print_board()
+                else:
+                    if self.board.do_turn(self.player2.mark) is True:
+                        vuoro = 1
+                    print("Kone on pelannut seuraavasti:")
+                    self.board.print_board()
+
         if self.board.check_board_full() is True:
             print("Peli loppui! Tasapeli!")
         if self.board.check_win() is True and vuoro == 2:
             print("Peli loppui!", self.player1.name, "voitti! Onnea!\n")
         if self.board.check_win() is True and vuoro == 1:
-            print("Peli loppui!", self.player2.name, "voitti! Onnea!\n")
+            if isinstance(self.player2, Humanplayer) is True:
+                print("Peli loppui!", self.player2.name, "voitti! Onnea!\n")
+            else:
+                print("Peli loppui! Kone voitti!")
