@@ -1,6 +1,5 @@
 import random
 
-
 class Board:
 
     def __init__(self):
@@ -33,17 +32,18 @@ class Board:
 
         return success
 
-    def do_turn(self, mark):
+    def do_turn(self,mark):
         success = False
         while success is False:
-            place = random.randint(1, 9)
+            place = random.randint(1,9)
             if self.numbers[place] == 'X' or self.numbers[place] == 'O':
                 break
 
             if self.numbers[place] != 'O' and self.numbers[place] != 'X':
-                self.numbers[place] = 'O'
+                self.numbers[place] = mark
                 success = True
         return success
+
 
     def check_win(self):
         win = False

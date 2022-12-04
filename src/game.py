@@ -46,7 +46,7 @@ class Game:
                 self.board.print_board()
 
             while vuoro == 2 and self.board.check_board_full() is False and self.board.check_win() is False:
-                if isinstance(self.player2, Humanplayer) is True: 
+                if isinstance(self.player2, Humanplayer) is True:
                     print("Vuorossa on", self.player2.name,
                           "\n Aseta merkkisi", self.player2.mark, "ruutuun 1-9\n ")
                     place = int(
