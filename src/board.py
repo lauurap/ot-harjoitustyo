@@ -16,32 +16,11 @@ class Board:
         print(" ")
 
     def set_mark(self, mark, place):
-        success = False
-        while success is False:
-            if place < 1 or place > 9:
-                print("Merkki tulee asettaa johonkin ruuduista 1-9!")
-                break
-
-            if self.numbers[place] == 'X' or self.numbers[place] == 'O':
-                print("Merkki tulee asetta vapaalle ruudulle!")
-                break
-
-            if self.numbers[place] != 'O' and self.numbers[place] != 'X':
-                self.numbers[place] = mark
-                success = True
-        return success
-
-    def do_turn(self,mark):
-        success = False
-        while success is False:
-            place = random.randint(1,9)
-            if self.numbers[place] == 'X' or self.numbers[place] == 'O':
-                break
-
-            if self.numbers[place] != 'O' and self.numbers[place] != 'X':
-                self.numbers[place] = mark
-                success = True
-        return success
+        if self.numbers[place] != 'O' and self.numbers[place] != 'X':
+            self.numbers[place] = mark
+            return True
+        else:
+            return False
 
     def check_win(self):
         win = False
