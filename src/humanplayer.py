@@ -2,7 +2,8 @@ from player import Player
 
 class Humanplayer(Player):
     def __init__(self, name, mark):
-        super().__init__(name, mark)
+        self.name=name
+        self.mark=mark
 
     def do_turn(self, board):
         success = False

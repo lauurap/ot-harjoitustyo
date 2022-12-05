@@ -6,7 +6,7 @@ COMMANDS = {
     "a": "a Aloita uusi peli",
     "j": "j Jatka aiempaa peliä",
 }
-MENU = "Aloita uusi peli kirjoittamalla a \nJatka aiempaa peliä kirjoittamalla j \nLopeta peli painamalla q \n"
+MENU = "a: Aloita uusi peli \nj: Jatka aiempaa peliä \nq: Lopeta peli \n"
 
 
 def main():

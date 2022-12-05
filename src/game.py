@@ -2,13 +2,10 @@ from board import Board
 from humanplayer import Humanplayer
 from computerplayer import Computerplayer
 
-
 class Game:
-
     def __init__(self):
         print("\nAloitetaan uusi peli! \n")
         self.board = Board()
-	
 
     def start_game(self):
         createname = False
@@ -58,4 +55,3 @@ class Game:
             print("Peli loppui!", self.player2.name, "voitti! \n")
         if self.board.check_board_full() is True and self.board.check_win() is False:
             print("Peli loppui! Tasapeli!")
-

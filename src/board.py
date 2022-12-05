@@ -1,7 +1,4 @@
-import random
-
 class Board:
-
     def __init__(self):
         self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
         print("Tässä on pelilauta: \n")
@@ -19,8 +16,7 @@ class Board:
         if self.numbers[place] != 'O' and self.numbers[place] != 'X':
             self.numbers[place] = mark
             return True
-        else:
-            return False
+        return False
 
     def check_win(self):
         win = False
