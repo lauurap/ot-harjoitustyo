@@ -8,6 +8,7 @@ class Game:
     def __init__(self):
         print("\nAloitetaan uusi peli! \n")
         self.board = Board()
+	
 
     def start_game(self):
         createname = True
@@ -68,4 +69,4 @@ class Game:
             if isinstance(self.player2, Humanplayer) is True:
                 print("Peli loppui!", self.player2.name, "voitti! Onnea!\n")
             else:
-                print("Peli loppui! Kone voitti!")
+                print("Peli loppui! Kone voitti!") 

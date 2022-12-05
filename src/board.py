@@ -29,7 +29,6 @@ class Board:
             if self.numbers[place] != 'O' and self.numbers[place] != 'X':
                 self.numbers[place] = mark
                 success = True
-
         return success
 
     def do_turn(self,mark):
@@ -43,7 +42,6 @@ class Board:
                 self.numbers[place] = mark
                 success = True
         return success
-
 
     def check_win(self):
         win = False
