@@ -12,6 +12,6 @@
 | 28.11 | 2 | arkkitehtuuri |
 | 29.11 | 1 | testejä |
 | 4.12 | 2 | konepelaaja ja testejä|
-| 5.12 | 1 | koodin parantamista | 
+| 5.12 | 4,5 | koodin parantamista | 
 
-Aika yht 24
+Aika yht 27,5
