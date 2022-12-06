@@ -34,7 +34,7 @@ Harjoitustyö on testattu Python 3.8 -versiolla
 
 2. poetry run invoke test suorittaa testit
 
-3. poetry run invoke coverage_report kerää testikattavuuden ja muodostaa HTML-raportin
+3. poetry run invoke coverage-report kerää testikattavuuden ja muodostaa HTML-raportin
 
 4. poetry run invoke lint suorittaa .pylintrc:n tarkistukset
 
