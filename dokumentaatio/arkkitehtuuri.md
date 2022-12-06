@@ -51,13 +51,13 @@ tietokonetta vai toista ihmispelaajaa vastaan.
       index ->> game : start_game()
       index ->> game : play_game()
       game ->> board : check_board_full()
-      game <<-- board : False
+      board -->> game : False
       game ->> board : check_win()
-      game <<-- board : False
+      board -->> game : False
       game ->> board : check_board_full()
-      game <<-- board : False
+      board -->> game : False
       break when check_win() and check_board_full() return False
           game ->> humanplayer : do_turn()
-          game <<-- board : True
+          board -->> game : True
       end
 ```
