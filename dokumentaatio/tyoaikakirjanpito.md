@@ -13,6 +13,6 @@
 | 29.11 | 1 | testejä |
 | 4.12 | 2 | konepelaaja ja testejä |
 | 5.12 | 4,5 | koodin rakenteen parantamista | 
-| 6.12 | 1,5 | koodin parantamista ja testejä |
+| 6.12 | 2,5 | koodin parantamista ja testejä, sekvenssikaavio |
 
-Aika yht 29
+Aika yht 30
