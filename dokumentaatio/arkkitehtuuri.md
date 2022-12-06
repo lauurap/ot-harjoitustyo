@@ -7,6 +7,8 @@ lisäyksiä.
       Board <|-- Game
       Humanplayer <|-- Game
       Computerplayer <|-- Game
+      Player <-- Humanplayer
+      Player <-- Computerplayer
       class Board{
           numbers
           print_board()
@@ -22,9 +24,15 @@ lisäyksiä.
       class Humanplayer{
           name
           mark
+          do_turn()
       }
       class Computerplayer{
+          name
           mark
-          random_place()
+          do_turn()
+      }
+      class Player{
+          name
+          mark
       }
 ```
