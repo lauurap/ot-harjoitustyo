@@ -1,6 +1,5 @@
 Ristinolla-pelissä Game-luokka käyttää pelaamisessa Board-, Humanplayer- ja Computerplayer-luokan olioita 
-ja metodeja. Computerplayer-luokkaa ei ole vielä tehty, joten siihen ja samoin muihinkin luokkiin voi tulla vielä 
-lisäyksiä.
+ja metodeja. 
 
 ```mermaid
  classDiagram
