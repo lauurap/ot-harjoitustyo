@@ -7,8 +7,8 @@ lisäyksiä.
       Board <|-- Game
       Humanplayer <|-- Game
       Computerplayer <|-- Game
-      Player <-- Humanplayer
-      Player <-- Computerplayer
+      Player o-- Humanplayer
+      Player o-- Computerplayer
       class Board{
           numbers
           print_board()
