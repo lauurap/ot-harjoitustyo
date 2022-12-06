@@ -13,4 +13,4 @@
 
 ## Viikko 5
 - Tehty konepelaaja
-- Testattu, että peli toimii oikein (ainoastaan merkin asetus käytettyyn paikkaan ei toimi)
+- Testattu, että peli toimii oikein myös väärillä syötteillä
