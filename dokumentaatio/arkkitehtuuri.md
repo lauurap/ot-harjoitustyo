@@ -54,10 +54,8 @@ tietokonetta vai toista ihmispelaajaa vastaan.
       board -->> game : False
       game ->> board : check_win()
       board -->> game : False
-      game ->> board : check_board_full()
-      board -->> game : False
-      break when check_win() and check_board_full() return False
+      while when check_win() and check_board_full() return False
           game ->> humanplayer : do_turn()
-          board -->> game : True
+          humanplayer -->> game : True
       end
 ```
