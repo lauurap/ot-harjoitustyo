@@ -76,9 +76,9 @@ class TestBoard(unittest.TestCase):
     def test_board_full(self):
         for i in range(1, 10):
             self.board.set_mark('X', i)
-        self.assertEqual(self.board.check_board_full(), True)
+        self.assertEqual(self.board.check_full(), True)
 
     def test_board_full_if_not_full(self):
         for i in range(1, 9):
             self.board.set_mark('X', i)
-        self.assertEqual(self.board.check_board_full(), False)
+        self.assertEqual(self.board.check_full(), False)

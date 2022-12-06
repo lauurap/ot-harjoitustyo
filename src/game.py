@@ -37,24 +37,23 @@ class Game:
     def play_game(self):
         print("Aloitetaan pelaaminen! \n")
         turn = 1
-        while self.board.check_board_full() is False and self.board.check_win() is False:
-            if turn == 1:
-                turn = 2
-                self.player1.do_turn(self.board)
-                self.board.print_board()
-            if turn == 2 and self.board.check_board_full() is False and self.board.check_win() is False:
-                if isinstance(self.player2, Humanplayer) is True:
-                    turn = 1
-                    self.player2.do_turn(self.board)
-                    self.board.print_board()
-                else:
+        while self.board.check_full() is False and self.board.check_win() is False:
+            while self.player1.do_turn(self.board) is False and turn==1:
+                print(" ")
+            turn = 2
+            self.board.print_board()
+            if turn == 2 and self.board.check_full() is False and self.board.check_win() is False:
+                while isinstance(self.player2, Humanplayer) is True and self.player2.do_turn(self.board) is False:
+                    print(" ")
+                turn = 1
+                if isinstance(self.player2, Computerplayer) is True:
                     self.player2.do_turn(self.board)
                     turn = 1
                     print("Kone on pelannut seuraavasti:")
-                    self.board.print_board()
+                self.board.print_board()
         if self.board.check_win() is True and turn == 2:
             print("Peli loppui!", self.player1.name, "voitti! \n")
         if self.board.check_win() is True and turn == 1:
             print("Peli loppui!", self.player2.name, "voitti! \n")
-        if self.board.check_board_full() is True and self.board.check_win() is False:
+        if self.board.check_full() is True and self.board.check_win() is False:
             print("Peli loppui! Tasapeli!")

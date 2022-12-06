@@ -9,13 +9,18 @@ class Humanplayer(Player):
         success = False
         text = "Mihin paikkaan haluat asettaa merkkisi? \n"
         print("Vuorossa on", self.name, "\nAseta merkkisi", self.mark)
-        place = int(input(text))
-        while success is False:
-            if place < 1 or place > 9:
-                print("Merkki tulee asettaa johonkin ruuduista 1-9!")
-                break
-            #if board.set_mark(self.mark, place) is False:
-                #print("Merkki tulee asettaa vapaalle ruudulle!")
-                #break
-            success = board.set_mark(self.mark, place)
-        return success
+        try:
+            place = int(input(text))
+        except ValueError:
+            print("Merkin tulee olla numero!")
+            return success
+        if int(place) < 1 or int(place) > 9:
+            print("Merkki tulee asettaa johonkin ruuduista 1-9!")
+            return success
+        if board.set_mark(self.mark, int(place)) is False:
+            print("Merkki tulee asettaa vapaalle ruudulle!")
+            return success
+        if board.set_mark(self.mark, int(place)) is True:
+            board.set_mark(self.mark, int(place))
+            success = True
+            return success

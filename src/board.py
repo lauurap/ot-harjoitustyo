@@ -31,7 +31,7 @@ class Board:
             win = True
         return win
 
-    def check_board_full(self):
+    def check_full(self):
         marks = 0
         status = False
         for i in range(10):
