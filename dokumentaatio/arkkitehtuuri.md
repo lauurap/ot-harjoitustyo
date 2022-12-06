@@ -45,6 +45,8 @@ ja metodeja. Alla on pelin rakennetta kuvaava luokkakaavio.
 Uuden pelin aloittaminen alkaa kirjoittamalla aloitusvalikkoon "a", 
 jonka jälkeen kirjoitetaan pelaajan nimi. Seuraavaksi valitaan, pelataanko
 tietokonetta vai toista ihmispelaajaa vastaan. 
+Alla oleva sekvenssikaavio kuvaa, miten peli etenee, kun kaksi ihmispelaajaa
+pelaa keskenään. 
 
 ```mermaid
  sequenceDiagram

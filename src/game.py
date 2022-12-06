@@ -36,25 +36,25 @@ class Game:
 
     def play_game(self):
         print("Aloitetaan pelaaminen! \n")
-        vuoro = 1
+        turn = 1
         while self.board.check_board_full() is False and self.board.check_win() is False:
-            if vuoro == 1:
-                vuoro = 2
+            if turn == 1:
+                turn = 2
                 self.player1.do_turn(self.board)
                 self.board.print_board()
-            if vuoro == 2 and self.board.check_board_full() is False and self.board.check_win() is False:
+            if turn == 2 and self.board.check_board_full() is False and self.board.check_win() is False:
                 if isinstance(self.player2, Humanplayer) is True:
-                    vuoro = 1
+                    turn = 1
                     self.player2.do_turn(self.board)
                     self.board.print_board()
                 else:
                     self.player2.do_turn(self.board)
-                    vuoro = 1
+                    turn = 1
                     print("Kone on pelannut seuraavasti:")
                     self.board.print_board()
-        if self.board.check_win() is True and vuoro == 2:
+        if self.board.check_win() is True and turn == 2:
             print("Peli loppui!", self.player1.name, "voitti! \n")
-        if self.board.check_win() is True and vuoro == 1:
+        if self.board.check_win() is True and turn == 1:
             print("Peli loppui!", self.player2.name, "voitti! \n")
         if self.board.check_board_full() is True and self.board.check_win() is False:
             print("Peli loppui! Tasapeli!")
