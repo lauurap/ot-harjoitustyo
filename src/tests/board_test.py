@@ -62,19 +62,12 @@ class TestBoard(unittest.TestCase):
         self.board.set_mark('X', 7)
         self.assertEqual(self.board.check_win(), True)
 
-    def test_do_turn_return_false_if_board_full(self):
-        for i in range(1, 10):
-            self.board.set_mark('X', i)
-        self.assertEqual(self.board.do_turn('O'), False)
-
-    def test_do_turn_return_true_if_board_notfull(self):
-        self.assertEqual(self.board.do_turn('O'), True)
 
     def test_constructor_set_mark_correct(self):
         self.assertEqual(self.board.set_mark('X', 7), True)
 
-    def test_constructor_not_set_mark_outside_board(self):
-        self.assertEqual(self.board.set_mark('X', 0), False)
+    #def test_constructor_not_set_mark_outside_board(self):
+        #self.assertEqual(self.board.set_mark('X', 0), False)
 
     def test_constructor_not_set_mark_same_place(self):
         self.board.set_mark('X', 1)

@@ -9,8 +9,13 @@ class TestGame(unittest.TestCase):
         self.game = Game()
         self.board = Board()
         self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.player1 = Humanplayer("Matti", "X")
+        self.player2 = Humanplayer("Maija", "O")
 
-    def test_players_cant_have_same_name(self):  # tarkista onko järkeä
-        humanplayer1 = Humanplayer("Hello", "X")
-        humanplayer2 = Humanplayer("Hello", "O")
-        self.assertEqual(humanplayer1.name, humanplayer2.name)
+    #def test_board_full_prints_correct(self): 
+        #self.player1 = Humanplayer("Matti", "X")
+        #self.player2 = Humanplayer("Maija", "O") 
+        #for i in range(1, 10):
+        #    self.board.set_mark('X', i)
+        #output = self.game.play_game()
+        #self.assertEqual(output, "Peli loppui! Tasapeli!")

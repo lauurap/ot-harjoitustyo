@@ -1,11 +1,14 @@
 from board import Board
 from humanplayer import Humanplayer
 from computerplayer import Computerplayer
+from player import Player
 
 class Game:
     def __init__(self):
         print("\nAloitetaan uusi peli! \n")
         self.board = Board()
+        self.player1 = Player("name1", 'X')
+        self.player2 = Player("name2", 'O')
 
     def start_game(self):
         createname = False
