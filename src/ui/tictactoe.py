@@ -1,11 +1,10 @@
 from services.game import Game
 
-class Tictactoe:
-
+class TicTacToe:
     def __init__(self):
         pass
 
-    def jotain(self):
+    def create_game(self):
         COMMANDS = {
             "q": "q Lopeta",
             "a": "a Aloita uusi peli",

@@ -1,17 +1,17 @@
 from services.board import Board
-from services.humanplayer import Humanplayer
-from services.computerplayer import Computerplayer
+from services.humanplayer import HumanPlayer
+from services.computerplayer import ComputerPlayer
 
 
 class Game:
     def __init__(self, name1, name2):
         print("\nAloitetaan uusi peli! \n")
         self.board = Board()
-        self.player1 = Humanplayer(name1, 'X')
+        self.player1 = HumanPlayer(name1, 'X')
         if name2 == "Kone":
-            self.player2 = Computerplayer(name2, 'O')
+            self.player2 = ComputerPlayer(name2, 'O')
         else:
-            self.player2 = Humanplayer(name2, 'O')
+            self.player2 = HumanPlayer(name2, 'O')
 
     def play_game(self):
         print("Aloitetaan pelaaminen! \n")
@@ -22,7 +22,7 @@ class Game:
             self.board.print_board()
             if self.game_is_finished(turn, self.board) is True:
                 break
-            if isinstance(self.player2, Computerplayer) is True:
+            if isinstance(self.player2, ComputerPlayer) is True:
                 self.player2.do_turn(self.board)
                 print("Kone on pelannut seuraavasti:")
                 turn = 1

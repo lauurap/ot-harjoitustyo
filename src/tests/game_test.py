@@ -1,7 +1,7 @@
 import unittest
 from services.game import Game
 from services.board import Board
-from services.humanplayer import Humanplayer
+from services.humanplayer import HumanPlayer
 
 
 class TestGame(unittest.TestCase):
@@ -9,8 +9,8 @@ class TestGame(unittest.TestCase):
         self.game = Game("Matti", "Maija")
         self.board = Board()
         self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
-        self.player1 = Humanplayer("Matti", 'X')
-        self.player2 = Humanplayer("Maija", 'O')
+        self.player1 = HumanPlayer("Matti", 'X')
+        self.player2 = HumanPlayer("Maija", 'O')
 
     def test_game_is_not_finished_return_true_if_full(self):
         for i in range(1, 10):
