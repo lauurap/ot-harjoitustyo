@@ -14,5 +14,7 @@
 | 4.12 | 2 | konepelaaja ja testejä |
 | 5.12 | 4,5 | koodin rakenteen parantamista | 
 | 6.12 | 3,5 | koodin parantamista ja testejä, sekvenssikaavio |
+| 8.12 | 3 | koodin pilkkomista pienempiin osiin |
+| 9.12 | 3,5 | koodin jakamista eri hakemistoihin |
 
-Aika yht 31
+Aika yht 37,5
