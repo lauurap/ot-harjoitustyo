@@ -1,5 +1,5 @@
 import unittest
-from board import Board
+from services.board import Board
 
 
 class TestBoard(unittest.TestCase):
@@ -62,12 +62,21 @@ class TestBoard(unittest.TestCase):
         self.board.set_mark('X', 7)
         self.assertEqual(self.board.check_win(), True)
 
-
     def test_constructor_set_mark_correct(self):
         self.assertEqual(self.board.set_mark('X', 7), True)
 
-    #def test_constructor_not_set_mark_outside_board(self):
-        #self.assertEqual(self.board.set_mark('X', 0), False)
+    def test_constructor_not_set_mark_outside_board(self):
+        self.assertEqual(self.board.check_place_free(10), False)
+
+    def test_place_need_be_number(self):
+        self.assertEqual(self.board.check_place_free("a"), False)
+
+    def test_constructor_not_set_mark_if_place_not_free(self):
+        self.board.set_mark('X', 3)
+        self.assertEqual(self.board.check_place_free(3), False)
+
+    def test_place_is_free(self):
+        self.assertEqual(self.board.check_place_free(3), True)
 
     def test_constructor_not_set_mark_same_place(self):
         self.board.set_mark('X', 1)

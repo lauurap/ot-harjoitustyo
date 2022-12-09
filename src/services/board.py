@@ -12,6 +12,22 @@ class Board:
         print(" ", self.numbers[7], "|", self.numbers[8], "|", self.numbers[9])
         print(" ")
 
+    def check_place_free(self, place):
+        free = False
+        try:
+            place = int(place)
+        except ValueError:
+            print("Merkin tulee olla numero!")
+            return free
+        if int(place) < 1 or int(place) > 9:
+            print("Merkki tulee asettaa johonkin ruuduista 1-9!")
+            return free
+        if self.numbers[int(place)] == 'X' or self.numbers[int(place)] == 'O':
+            print("Merkki tulee asettaa vapaalle ruudulle!")
+            return free
+        free = True
+        return free
+
     def set_mark(self, mark, place):
         if self.numbers[place] != 'O' and self.numbers[place] != 'X':
             self.numbers[place] = mark
@@ -33,10 +49,10 @@ class Board:
 
     def check_full(self):
         marks = 0
-        status = False
+        full = False
         for i in range(10):
             if self.numbers[i] == 'O' or self.numbers[i] == 'X':
                 marks += 1
         if marks == 9:
-            status = True
-        return status
+            full = True
+        return full

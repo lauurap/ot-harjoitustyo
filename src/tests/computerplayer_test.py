@@ -1,6 +1,6 @@
 import unittest
-from computerplayer import Computerplayer
-from board import Board
+from services.computerplayer import Computerplayer
+from services.board import Board
 
 
 class TestComputerplayer(unittest.TestCase):
