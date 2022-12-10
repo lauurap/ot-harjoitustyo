@@ -7,7 +7,7 @@ class TicTacToe:
 
     def create_game(self):
         COMMANDS = {
-            "q": "q Lopeta",
+            "l": "l Lopeta",
             "a": "a Aloita uusi peli",
             "j": "j Jatka aiempaa peliä",
         }
@@ -20,7 +20,7 @@ class TicTacToe:
             if not command in COMMANDS:
                 print("Anna jokin seuraavista komennoista: \n")
                 print(MENU)
-            if command == "q":
+            if command == "l":
                 print(
                     "Sorry, ei vielä valmis, joten peli loppuu ilman tallennusmahdollisuutta")
                 started = True
@@ -54,5 +54,6 @@ class TicTacToe:
         if response == "kyllä":
             name2 = "Kone"
         game = Game(name1, name2)
-        
+        print("Aloitetaan pelaaminen! \n")
+        print("Kun ohjelma kysyy merkin paikkaa, voit myös syöttää seuraavat komennot: \nt: Tallenna \nl: Lopeta \nj: Jatka edellistä peliä\n")
         game.play_game()

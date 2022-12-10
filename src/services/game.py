@@ -2,7 +2,6 @@ from services.board import Board
 from services.humanplayer import HumanPlayer
 from services.computerplayer import ComputerPlayer
 
-
 class Game:
     def __init__(self, name1, name2):
         print("\nAloitetaan uusi peli! \n")
@@ -13,14 +12,7 @@ class Game:
         else:
             self.player2 = HumanPlayer(name2, 'O')
 
-    def give_player1(self):
-        return self.player1.name
-
-    def give_player2(self):
-        return self.player2.name
-
     def play_game(self):
-        print("Aloitetaan pelaaminen! \n")
         turn = 1
         while self.game_is_finished(turn, self.board) is False:
             self.player1.do_turns(self.board, turn)

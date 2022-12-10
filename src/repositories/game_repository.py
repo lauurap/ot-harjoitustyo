@@ -8,7 +8,7 @@ class GameRepository:
         board = ""
         for i in range(10):
             board += str(numbers[i])
-        file.write("Pelaaja1, Pelaaja2, lauta, vuoro: \n")
+        file.write("Pelaaja1, Pelaaja2, lauta, vuoro:")
         file.write(self.name1 + self.name2 + board + str(turn))
         file.close()
         print("Tallennus onnistui")

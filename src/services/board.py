@@ -1,5 +1,4 @@
 from repositories.game_repository import GameRepository
-#from services.game import Game
 
 class Board:
     def __init__(self,name1,name2):
@@ -8,7 +7,6 @@ class Board:
         self.print_board()
         self.name1 = name1
         self.name2 = name2
-
 
     def print_board(self):
         print(" ", self.numbers[1], "|", self.numbers[2], "|", self.numbers[3])
