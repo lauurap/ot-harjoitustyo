@@ -1,4 +1,5 @@
 from services.game import Game
+from repositories.game_repository import GameRepository
 
 class TicTacToe:
     def __init__(self):
@@ -53,4 +54,5 @@ class TicTacToe:
         if response == "kyllä":
             name2 = "Kone"
         game = Game(name1, name2)
+        
         game.play_game()

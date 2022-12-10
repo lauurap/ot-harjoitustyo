@@ -6,18 +6,24 @@ from services.computerplayer import ComputerPlayer
 class Game:
     def __init__(self, name1, name2):
         print("\nAloitetaan uusi peli! \n")
-        self.board = Board()
+        self.board = Board(name1,name2)
         self.player1 = HumanPlayer(name1, 'X')
         if name2 == "Kone":
             self.player2 = ComputerPlayer(name2, 'O')
         else:
             self.player2 = HumanPlayer(name2, 'O')
 
+    def give_player1(self):
+        return self.player1.name
+
+    def give_player2(self):
+        return self.player2.name
+
     def play_game(self):
         print("Aloitetaan pelaaminen! \n")
         turn = 1
         while self.game_is_finished(turn, self.board) is False:
-            self.player1.do_turns(self.board)
+            self.player1.do_turns(self.board, turn)
             turn = 2
             self.board.print_board()
             if self.game_is_finished(turn, self.board) is True:
@@ -27,7 +33,7 @@ class Game:
                 print("Kone on pelannut seuraavasti:")
                 turn = 1
             else:
-                self.player2.do_turns(self.board)
+                self.player2.do_turns(self.board, turn)
                 turn = 1
             self.board.print_board()
 

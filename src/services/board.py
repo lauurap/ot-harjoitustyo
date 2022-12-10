@@ -1,8 +1,14 @@
+from repositories.game_repository import GameRepository
+#from services.game import Game
+
 class Board:
-    def __init__(self):
+    def __init__(self,name1,name2):
         self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
         print("Tässä on pelilauta: \n")
         self.print_board()
+        self.name1 = name1
+        self.name2 = name2
+
 
     def print_board(self):
         print(" ", self.numbers[1], "|", self.numbers[2], "|", self.numbers[3])
@@ -12,10 +18,13 @@ class Board:
         print(" ", self.numbers[7], "|", self.numbers[8], "|", self.numbers[9])
         print(" ")
 
-    def check_place_free(self, place):
+    def check_place_free(self, place, turn):
         free = False
         if place == "t":
-            print("Tallennetaan!")		
+            print("Tallennetaan!")
+            game_repository = GameRepository(self.name1, self.name2)
+            game_repository.store(self.numbers, turn)
+            game_repository.read()
         try:
             place = int(place)
         except ValueError:
