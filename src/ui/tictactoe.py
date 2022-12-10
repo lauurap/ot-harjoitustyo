@@ -25,12 +25,12 @@ class TicTacToe:
                 started = True
                 break
             if command == "a":
-                self.create_game()
+                self.start_game()
                 started = True
             elif command == "j":
                 print("Sorry, ei vielä vamis")
 
-    def create_game(self):
+    def start_game(self):
         createname = False
         while createname is False:
             name1 = input("Anna pelaajan 1 nimi ")

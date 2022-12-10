@@ -14,6 +14,8 @@ class Board:
 
     def check_place_free(self, place):
         free = False
+        if place == "t":
+            print("Tallennetaan!")		
         try:
             place = int(place)
         except ValueError:
