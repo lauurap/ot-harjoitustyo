@@ -16,5 +16,6 @@
 | 6.12 | 3,5 | koodin parantamista ja testejä, sekvenssikaavio |
 | 8.12 | 3 | koodin pilkkomista pienempiin osiin |
 | 9.12 | 3,5 | koodin jakamista eri hakemistoihin |
+| 10.12 | 4 | tallennus |
 
-Aika yht 37,5
+Aika yht 41,5
