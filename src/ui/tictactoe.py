@@ -31,8 +31,9 @@ class TicTacToe:
                 list = game_repository.read()
                 name1 = list[0]
                 name2 = list[1]
-                board = list[2]
+                boardlist = list[2]
                 turn = list[3]
+		
                 game = Game(name1, name2, turn)
                 print("\nJatketaan tallennettua peliä!\n")
                 game.play_game()
