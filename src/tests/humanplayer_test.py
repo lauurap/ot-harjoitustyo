@@ -5,7 +5,7 @@ from services.board import Board
 
 class TestHumanplayer(unittest.TestCase):
     def setUp(self):
-        self.board = Board()
+        self.board = Board("Matti", "Maija")
         self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
         self.humanplayer = HumanPlayer("Matti", 'X')
 

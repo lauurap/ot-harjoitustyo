@@ -4,7 +4,7 @@ from services.board import Board
 
 class TestBoard(unittest.TestCase):
     def setUp(self):
-        self.board = Board()
+        self.board = Board("name1", "name2")
         self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     def test_created_board_exist(self):
@@ -66,17 +66,17 @@ class TestBoard(unittest.TestCase):
         self.assertEqual(self.board.set_mark('X', 7), True)
 
     def test_constructor_not_set_mark_outside_board(self):
-        self.assertEqual(self.board.check_place_free(10), False)
+        self.assertEqual(self.board.check_place_free(10, 1), False)
 
     def test_place_need_be_number(self):
-        self.assertEqual(self.board.check_place_free("a"), False)
+        self.assertEqual(self.board.check_place_free("a", 1), False)
 
     def test_constructor_not_set_mark_if_place_not_free(self):
         self.board.set_mark('X', 3)
-        self.assertEqual(self.board.check_place_free(3), False)
+        self.assertEqual(self.board.check_place_free(3, 1), False)
 
     def test_place_is_free(self):
-        self.assertEqual(self.board.check_place_free(3), True)
+        self.assertEqual(self.board.check_place_free(3, 1), True)
 
     def test_constructor_not_set_mark_same_place(self):
         self.board.set_mark('X', 1)
