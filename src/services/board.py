@@ -19,9 +19,9 @@ class Board:
     def check_place_free(self, place, turn):
         free = False
         if place == "t":
-            print("Tallennetaan!")
             game_repository = GameRepository(self.name1, self.name2)
             game_repository.store(self.numbers, turn)
+            return free		
         try:
             place = int(place)
         except ValueError:
