@@ -16,4 +16,4 @@
 - Testattu, että peli toimii oikein myös väärillä syötteillä
 
 ## Viikko 6
-- Aloitettu tallennusta
+- Aloitettu tallennusta -> peliä saadaan jatkettua oikeilla pelaajilla ja vuorolla, lauta vielä kesken
