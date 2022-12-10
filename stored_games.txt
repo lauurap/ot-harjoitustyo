@@ -1,2 +1,4 @@
-Pelaaja1, Pelaaja2, lauta, vuoro: 
-ekaKone XO34X67O91
+Ekanen
+Tokanen
+ 1234X6789
+2

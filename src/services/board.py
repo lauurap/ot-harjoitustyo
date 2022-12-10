@@ -1,7 +1,8 @@
 from repositories.game_repository import GameRepository
 
+
 class Board:
-    def __init__(self,name1,name2):
+    def __init__(self, name1, name2):
         self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
         print("Tässä on pelilauta: \n")
         self.print_board()
@@ -22,7 +23,7 @@ class Board:
             print("Tallennetaan!")
             game_repository = GameRepository(self.name1, self.name2)
             game_repository.store(self.numbers, turn)
-            game_repository.read()
+            # game_repository.read()
         try:
             place = int(place)
         except ValueError:

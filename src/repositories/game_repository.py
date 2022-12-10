@@ -8,14 +8,18 @@ class GameRepository:
         board = ""
         for i in range(10):
             board += str(numbers[i])
-        file.write("Pelaaja1, Pelaaja2, lauta, vuoro:")
-        file.write(self.name1 + self.name2 + board + str(turn))
+        file.write(self.name1 + "\n")
+        file.write(self.name2 + "\n")
+        file.write(board + "\n")
+        file.write(str(turn))
         file.close()
         print("Tallennus onnistui")
 
     def read(self):
         file = open("stored_games.txt", "r")
-        stored_boards = file.readlines()
+        name1 = file.readline().strip()
+        name2 = file.readline().strip()
+        board = file.readline().strip()
+        turn = file.readline().strip()
         file.close()
-        for line in stored_boards:
-            print(line)
+        return [name1, name2, board, turn]
