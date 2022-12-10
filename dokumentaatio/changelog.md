@@ -14,3 +14,6 @@
 ## Viikko 5
 - Tehty konepelaaja
 - Testattu, että peli toimii oikein myös väärillä syötteillä
+
+## Viikko 6
+- Aloitettu tallennusta
