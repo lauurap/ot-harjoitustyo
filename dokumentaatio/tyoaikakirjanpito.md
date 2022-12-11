@@ -17,5 +17,6 @@
 | 8.12 | 3 | koodin pilkkomista pienempiin osiin |
 | 9.12 | 3,5 | koodin jakamista eri hakemistoihin |
 | 10.12 | 4 | tallennus |
+| 11.12 | 3 | tallennus ja docstring |
 
-Aika yht 41,5
+Aika yht 44,5
