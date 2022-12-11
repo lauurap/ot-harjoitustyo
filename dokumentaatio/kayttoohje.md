@@ -13,7 +13,7 @@ Lataa viimeisen release tästä... (Lisätään kun ohjelma valmis!)
 
 Peli käynnistyy aloitusvalikkoon:
 
-![](./kuvat/aloitusvalikko.png)
+![](./kuvat/aloitusvalikko.PNG)
 
 Peli aloitetaan kirjoittamalla haluttu komento komentoriville.
 
@@ -23,7 +23,7 @@ Jos halutaan aloittaa uusi peli, aloitusvalikkoon syötetään a komentoriville.
 Tämän jälkeen syötetään ensimmäisen pelaajan nimi ja valitaan pelataanko konetta vai
 toista ihmistä vastaan.
 
-![](./kuvat/pelaajiensyotto.png)
+![](./kuvat/pelaajiensyotto.PNG)
 
 Tämän jälkeen aletaan syöttämään numeroita 1-9 sen mukaan, mihin paikkaan
 pelilaudalle pelaaja haluaa merkkinsä asettaa.
@@ -33,11 +33,11 @@ pelilaudalle pelaaja haluaa merkkinsä asettaa.
 Jos peli halutaan tallentaa, syötetään t kun peli kysyy minne pelaaja haluaa 
 merkkinsä asettaa.
 
-![](./kuvat/tallentaminen.png)
+![](./kuvat/tallentaminen.PNG)
 
 ## Tallennetun pelin jatkaminen
 
 Jos halutaan jatkaa aiemmin tallennettua peliä, tulee peli käynnistää ja 
 aloitusvalikossa syöttää j. 
 
-![](./kuvat/jatkaminen.png)
+![](./kuvat/jatkaminen.PNG)
