@@ -9,7 +9,6 @@ Lataa viimeisen release tästä... (Lisätään kun ohjelma valmis!)
 2. poetry run invoke start käynnistää ristinolla-pelin
 
 
-
 ## Aloitusvalikko
 
 Peli käynnistyy aloitusvalikkoon:
