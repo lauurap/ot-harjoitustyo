@@ -1,12 +1,18 @@
 from repositories.game_repository import GameRepository
 
 class Board:
-    def __init__(self,name1,name2):
-        self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    def __init__(self, name1, name2, numberlist):
+        self.numbers = self.numberlist_to_numbers(numberlist)
         print("Tässä on pelilauta: \n")
         self.print_board()
         self.name1 = name1
         self.name2 = name2
+
+    def numberlist_to_numbers(self, numberlist):
+        numbers = [" "]
+        for i in range(9):
+            numbers.append(numberlist[i])
+        return numbers
 
     def print_board(self):
         print(" ", self.numbers[1], "|", self.numbers[2], "|", self.numbers[3])
@@ -21,7 +27,7 @@ class Board:
         if place == "t":
             game_repository = GameRepository(self.name1, self.name2)
             game_repository.store(self.numbers, turn)
-            return free		
+            return free
         try:
             place = int(place)
         except ValueError:

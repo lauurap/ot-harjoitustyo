@@ -4,8 +4,7 @@ from services.board import Board
 
 class TestBoard(unittest.TestCase):
     def setUp(self):
-        self.board = Board("name1", "name2")
-        self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.board = Board("name1", "name2", "123456789")
 
     def test_created_board_exist(self):
         self.assertNotEqual(self.board, None)

@@ -33,8 +33,7 @@ class TicTacToe:
                 name2 = list[1]
                 boardlist = list[2]
                 turn = list[3]
-		
-                game = Game(name1, name2, turn)
+                game = Game(name1, name2, turn, boardlist)
                 print("\nJatketaan tallennettua peliä!\n")
                 game.play_game()
                 started = True
@@ -61,7 +60,7 @@ class TicTacToe:
                       name1, "ja", name2, "!\n")
         if response == "kyllä":
             name2 = "Kone"
-        game = Game(name1, name2, "1")
+        game = Game(name1, name2, "1", "123456789")
         print("\nAloitetaan uusi peli! \n")
         print("Kun ohjelma kysyy merkin paikkaa, voit myös syöttää seuraavan komennon: \nt: Tallenna\n")
         game.play_game()

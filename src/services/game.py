@@ -4,8 +4,8 @@ from services.computerplayer import ComputerPlayer
 
 
 class Game:
-    def __init__(self, name1, name2, turn):
-        self.board = Board(name1, name2)
+    def __init__(self, name1, name2, turn, numberlist):
+        self.board = Board(name1, name2, numberlist)
         self.player1 = HumanPlayer(name1, 'X')
         if name2 == "Kone":
             self.player2 = ComputerPlayer(name2, 'O')

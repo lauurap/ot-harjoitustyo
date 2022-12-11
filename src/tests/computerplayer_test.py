@@ -5,8 +5,7 @@ from services.board import Board
 
 class TestComputerPlayer(unittest.TestCase):
     def setUp(self):
-        self.board = Board("Matti", "Maija")
-        self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.board = Board("Matti", "Maija", "123456789")
         self.computerplayer = ComputerPlayer("Kone", 'X')
 
     def test_constructor_do_turn_correct(self):

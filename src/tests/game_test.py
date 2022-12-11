@@ -6,9 +6,8 @@ from services.humanplayer import HumanPlayer
 
 class TestGame(unittest.TestCase):
     def setUp(self):
-        self.game = Game("Matti", "Maija", '1')
-        self.board = Board("Matti", "Maija")
-        self.numbers = [" ", 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.game = Game("Matti", "Maija", '1', "123456789")
+        self.board = Board("Matti", "Maija", "123456789")
         self.player1 = HumanPlayer("Matti", 'X')
         self.player2 = HumanPlayer("Maija", 'O')
 
