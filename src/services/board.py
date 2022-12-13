@@ -11,11 +11,11 @@ class Board:
     """
 
     def __init__(self, name1, name2, numberstring):
-        """Luokan konstruktori, joka luo uuden laudan pelin alussa 
-        tai jatkettaessa tallennettua peliä.
+        """Luokan konstruktori, joka luo uuden laudan pelin
+        alussa tai jatkettaessa tallennettua peliä.
 
         Args:
-                numbers: Laudalla alkutilanteessa olevat numerot/merkit listana
+                numbers: Laudalla alussa olevat numerot/merkit listana
                 name1: Pelaajan 1 nimi
                 name2: Pelaajan 2 nimi
         """
@@ -27,13 +27,15 @@ class Board:
         self.name2 = name2
 
     def numberstring_to_numbers(self, numberstring):
-        """Muuttaa laudalla olevat numerot/merkit string-muodosta listaksi.
+        """Muuttaa laudalla olevat numerot/merkit
+        string-muodosta listaksi.
 
         Args:
-                numberstring: Laudalla alkutilanteessa olevat numerot/merkit string-muodossa.
+                numberstring: Laudalla alussa olevat
+                numerot/merkit string-muodossa.
 
         Returns:
-                numbers: Laudalla alkutilanteessa olevat numerot/merkit listana.
+                numbers: Laudalla alussa olevat numerot/merkit listana.
         """
 
         numbers = [" "]
@@ -57,10 +59,12 @@ class Board:
 
         Jos paikaksi annetaan t, ohjelma suorittaa tallennuksen.
 
-        Jos paikka on kelvollinen, tarkistaa onko kyseisellä paikalla jo merkki.
+        Jos paikka on kelvollinen, tarkistaa onko kyseisellä paikalla
+        jo merkki.
 
         Returns:
-                True, jos paikka on kelvollinen ja paikalla ei vielä ole merkkiä, muussa tapauksessa False.
+                True, jos paikka on kelvollinen ja paikalla ei vielä
+                ole merkkiä, muussa tapauksessa False.
         """
 
         free = False
@@ -86,7 +90,8 @@ class Board:
         """Asettaa pelaajan merkin pelilaudalle pelaajan haluamaan paikkaan
 
         Returns:
-                True, jos asetus on mahdollinen eli paikalla ei vielä ole merkkiä, muussa tapauksessa False.
+                True, jos asetus on mahdollinen eli paikalla ei vielä ole
+                merkkiä, muussa tapauksessa False.
         """
 
         if self.numbers[place] != 'O' and self.numbers[place] != 'X':
@@ -95,10 +100,12 @@ class Board:
         return False
 
     def check_win(self):
-        """Tarkastaa, onko laudalla kolme samaa merkkiä vaaka-, pysty- tai diagonaalisessa suunnassa.
+        """Tarkastaa, onko laudalla kolme samaa merkkiä vaaka-,
+        pysty- tai diagonaalisessa suunnassa.
 
         Returns:
-                True, jos laudalla on kolme samaa merkkiä vaaka-, pysty- tai diagonaalisessa suunnassa, muussa tapauksessa False.
+                True, jos laudalla on kolme samaa merkkiä vaaka-,
+                pysty- tai diagonaalisessa suunnassa, muutoin False.
         """
 
         win = False
@@ -117,7 +124,8 @@ class Board:
         """Tarkastaa, onko laudalla jokaisessa paikassa X tai O.
 
         Return:
-                True, jos laudalla on jokaisessa paikassa X tai O. Muussa tapauksessa False.
+                True, jos laudalla on jokaisessa paikassa X tai O.
+                Muussa tapauksessa False.
         """
 
         marks = 0

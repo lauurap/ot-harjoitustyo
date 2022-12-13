@@ -2,27 +2,52 @@
 
 ## Rakenne
 
-Ristinolla-pelissä Game-luokka käyttää pelaamisessa Board-, Humanplayer- ja Computerplayer-luokan olioita 
-ja metodeja. Alla on pelin rakennetta kuvaava luokkakaavio.
+Koodin pakkausrakenne on alla: 
+
+![](./kuvat/pakkausrakenne1.PNG)
+
+Pakkaus ui sisältää käyttöliittymän koodin ja services sisältää sovelluslogiikan koodin, eli luokat Game, Board, 
+Humanplayer ja Computerplayer. Repositories vastaa tietojen tallentamisen tiedostoon ja tietojen lukemisen tiedostosta.
+
+## Käyttöliittymä
+
+Kun peli käynnistetään, avautuu valikko, jonka näyttämisestä vastaa TicTacToe-luokka. Jos halutaan aloittaa uusi peli,
+TicTacToe luo services-pakkauksessa olevan Game-olion ja kutsuu Game-luokan metodeja. 
+
+Jos halutaan jatkaa aiemmin tallennettua peliä, TicTacToe luo repositories-pakkauksen GameRepository-olion ja kutsuu 
+GameRepository-luokan metodeja, jolloin tallennetun pelin tiedot saadaan luotua. Tämän jälkeen TicTacToe luo 
+services-pakkauksessa olevan Game-olion ja kutsuu Game-luokan metodeja.
+
+## Sovelluslogiikka 
+
+Sovelluslogiikan muodostavat luokat Game, Board, Humanplayer ja Computerplayer. Ristinolla-pelissä Game-luokka 
+kutsuu pelaamisessa Board-, Humanplayer- ja Computerplayer-luokan metodeja. Alla on pelin rakennetta kuvaava luokkakaavio.
 
 ```mermaid
  classDiagram
       Board <|-- Game
       Humanplayer <|-- Game
       Computerplayer <|-- Game
-      Player <-- Humanplayer
-      Player <-- Computerplayer
       class Board{
+          name1
+          name2
+          numberstring
           numbers
+          numberstring_to_numbers()
           print_board()
+          check_place_free()
           set_mark()
           check_win()
           check_board_full()
 
       }
       class Game{
-          start_game()
+          name1
+          name2
+          turn
+          numberstring
           play_game()
+          game_is_finished()
       }
       class Humanplayer{
           name
@@ -33,15 +58,24 @@ ja metodeja. Alla on pelin rakennetta kuvaava luokkakaavio.
           name
           mark
           do_turn()
+          ask_place()
+          do_turns()
       }
       class Player{
           name
           mark
+          do_turn()
       }
 ```
 
+## Pelin tallennus
+
+Pakkauksen repositories luokka GameRepository vastaa pelin tallentamisesta. GameRepositoryn metodi store tallentaa pelin
+pelaajat, vuorossa olevan pelaajan ja pelilaudan tiedostoon. GameRepositoryn metodi read lukee tiedostosta vastaavat tiedot. 
+
 ## Toiminnallisuus
 
+### Uuden pelin aloittaminen
 Uuden pelin aloittaminen alkaa kirjoittamalla aloitusvalikkoon "a", 
 jonka jälkeen kirjoitetaan pelaajan nimi. Seuraavaksi valitaan, pelataanko
 tietokonetta vai toista ihmispelaajaa vastaan. 
@@ -50,15 +84,14 @@ pelaa keskenään.
 
 ```mermaid
  sequenceDiagram
-      index ->> game : start_game()
-      index ->> game : play_game()
-      game ->> board : check_board_full()
-      board -->> game : False
-      game ->> board : check_win()
-      board -->> game : False
-      loop while check_win() and check_board_full() return False
-          game ->> humanplayer : do_turn()
-          humanplayer -->> game : True
-          game --> game : change turn
+      TicTacToe ->> Game : play_game()
+      Game ->> Board : check_board_full()
+      Board -->> Game : False
+      Game ->> Board : check_win()
+      Board -->> Game : False
+      loop while game_is_finished() return False
+          Game ->> Humanplayer : do_turns()
+          Humanplayer -->> Game : True
+          Game --> Game : change turn
       end
 ```

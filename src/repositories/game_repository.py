@@ -12,8 +12,8 @@ class GameRepository:
         Args:
             name1 = Pelaajan 1 nimi
             name2 = Pelaajan 2 nimi
-        """	
-        
+        """
+
         self.name1 = name1
         self.name2 = name2
 
@@ -32,7 +32,8 @@ class GameRepository:
         print("Tallennus onnistui")
 
     def read(self):
-        """Lukee tiedostosta tallenetun pelin palaajat, pelilaudan ja seuraavana vuorossa olevan pelaajan vuoron.
+        """Lukee tiedostosta tallenetun pelin palaajat, pelilaudan
+        ja seuraavana vuorossa olevan pelaajan vuoron.
 
         Returns:
             Listan, jossa on pelaajien nimet, pelilauta ja pelivuoro.

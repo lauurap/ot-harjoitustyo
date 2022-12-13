@@ -23,7 +23,7 @@ class ComputerPlayer:
     def do_turn(self, board):
         """Asettaa merkin pelilaudalle randomilla määriteltyyn paikkaan.
 
-        Args: 
+        Args:
             board: Pelilauta, jonne merkki asetetaan
 
         Returns:

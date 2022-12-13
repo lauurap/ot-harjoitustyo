@@ -6,11 +6,11 @@ from services.computerplayer import ComputerPlayer
 class Game:
     """Luokka, jonka avulla pelin pelaaminen suoritetaan.
 
-    Attributes: 
+    Attributes:
         name1: Pelaajan 1 nimi
         name2: Pelaajan 2 nimi
         turn: Vuoro, joka määrittää kumpi pelaaja pelaa
-        numberstring: Laudalla alkutilanteessa olevat numerot/merkit 
+        numberstring: Laudalla alkutilanteessa olevat numerot/merkit
     """
 
     def __init__(self, name1, name2, turn, numberstring):
@@ -56,7 +56,8 @@ class Game:
         """Vastaa pelin tilan tarkistamisesta. Tarkistaa, onko pelissä voittaja tai tasapeli.
 
         Returns:
-            True, jos pelissä jompikumpi pelaaja on voittanut tai pelissä on tasapelitilanne, muussa tapauksessa False.	
+            True, jos pelissä jompikumpi pelaaja on voittanut tai
+            pelissä on tasapelitilanne, muussa tapauksessa False.
         """
 
         finished = False

@@ -29,10 +29,10 @@ class HumanPlayer:
     def ask_place(self, board, turn):
         """Kysyy pelaajalta, mihin pelaaja haluaa asettaa merkin.
 
-        Args: 
+        Args:
             board: Pelilauta, jonne merkki asetetaan
             turn: Vuorossa olevan pelaajan vuoro
-	
+
         Returns:
             place eli paikan, jos paikka hyväksytään
         """
