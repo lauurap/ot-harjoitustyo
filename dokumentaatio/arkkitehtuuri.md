@@ -85,13 +85,16 @@ pelaa keskenään.
 ```mermaid
  sequenceDiagram
       TicTacToe ->> Game : play_game()
-      Game ->> Board : check_board_full()
-      Board -->> Game : False
-      Game ->> Board : check_win()
-      Board -->> Game : False
+
       loop while game_is_finished() return False
-          Game ->> Humanplayer : do_turns()
-          Humanplayer -->> Game : True
+          Game ->> HumanPlayer : do_turns()
+          HumanPlayer -->> Game : True
           Game --> Game : change turn
       end
+      HumanPlayer ->> Board : check_place_free()
+      Board --> HumanPlayer : True
+      HumanPlayer ->> Board : set_mark()
+      Board --> HumanPlayer : True
+
+
 ```
