@@ -88,13 +88,14 @@ pelaa keskenään.
 
       loop while game_is_finished() return False
           Game ->> HumanPlayer : do_turns()
+          HumanPlayer ->> Board : check_place_free()
+          Board --> HumanPlayer : True
+          HumanPlayer ->> Board : set_mark()
+          Board --> HumanPlayer : True
           HumanPlayer -->> Game : True
           Game --> Game : change turn
       end
-      HumanPlayer ->> Board : check_place_free()
-      Board --> HumanPlayer : True
-      HumanPlayer ->> Board : set_mark()
-      Board --> HumanPlayer : True
+
 
 
 ```
