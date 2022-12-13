@@ -18,5 +18,6 @@
 | 9.12 | 3,5 | koodin jakamista eri hakemistoihin |
 | 10.12 | 4 | tallennus |
 | 11.12 | 4 | tallennus ja docstring, käyttöohje |
+| 13.12 | 2 | arkkitehtuuri |
 
-Aika yht 45,5
+Aika yht 47,5
