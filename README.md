@@ -4,7 +4,9 @@
 
 Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa. 
 Pelaaja voi valita, pelaako hän konetta vai toista ihmispelaajaa vastaan. 
-Tallennusmahdollisuus on myös tulossa.
+Pelin pystyy tallentamaan ja jatkamaan myöhemmin.
+
+[Viikon 6 release](https://github.com/lauurap/ot-harjoitustyo/releases/tag/viikko6)
 
 [Viikon 5 release](https://github.com/lauurap/ot-harjoitustyo/releases/tag/viikko5)
 
