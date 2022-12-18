@@ -70,6 +70,7 @@ class Board:
         if place == "t":
             game_repository = GameRepository(self.name1, self.name2)
             game_repository.store(self.numbers, turn)
+            print("Tallennus onnistui")
             return False
         try:
             place = int(place)

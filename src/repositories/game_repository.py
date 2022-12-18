@@ -29,7 +29,6 @@ class GameRepository:
             file.write(self.name2 + "\n")
             file.write(board + "\n")
             file.write(str(turn))
-        print("Tallennus onnistui")
 
     def read(self) -> list:
         """Lukee tiedostosta tallenetun pelin palaajat, pelilaudan

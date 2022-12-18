@@ -33,10 +33,13 @@ class TicTacToe:
                 name2 = list[1]
                 numberstring = list[2]
                 turn = list[3]
-                game = Game(name1, name2, turn, numberstring)
-                print("\nJatketaan tallennettua peliä!\n")
-                game.play_game()
-                started = True
+                if name1 not in " ":
+                    game = Game(name1, name2, turn, numberstring)
+                    print("\nJatketaan tallennettua peliä!\n")
+                    game.play_game()
+                    started = True
+                else:
+                    print("Ei tallennettua peliä")
 
     def start_game(self) -> None:
         create_name = False
