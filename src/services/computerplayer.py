@@ -20,7 +20,7 @@ class ComputerPlayer:
         self.name = name
         self.mark = mark
 
-    def do_turn(self, board):
+    def do_turn(self, board) -> bool:
         """Asettaa merkin pelilaudalle randomilla määriteltyyn paikkaan.
 
         Args:

@@ -17,7 +17,7 @@ class GameRepository:
         self.name1 = name1
         self.name2 = name2
 
-    def store(self, numbers, turn):
+    def store(self, numbers, turn) -> None:
         """Tallentaa pelaajat, pelilaudan ja seuraavana vuorossa olevan pelaajan vuoron.
         """
 
@@ -31,7 +31,7 @@ class GameRepository:
             file.write(str(turn))
         print("Tallennus onnistui")
 
-    def read(self):
+    def read(self) -> list:
         """Lukee tiedostosta tallenetun pelin palaajat, pelilaudan
         ja seuraavana vuorossa olevan pelaajan vuoron.
 

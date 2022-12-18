@@ -31,7 +31,7 @@ class Game:
             self.player2 = HumanPlayer(name2, 'O')
         self.turn = int(turn)
 
-    def play_game(self):
+    def play_game(self) -> None:
         """Vastaa pelin pelaamisen suorittamisesta. Kun peli on kesken, vaihtaa
         pelaajan vuoroja ja antaa pelaajalle pelivuoron.
         """
@@ -52,7 +52,7 @@ class Game:
                 self.turn = 1
             self.board.print_board()
 
-    def game_is_finished(self, turn, board):
+    def game_is_finished(self, turn, board) -> bool:
         """Vastaa pelin tilan tarkistamisesta. Tarkistaa, onko pelissä voittaja tai tasapeli.
 
         Returns:
@@ -60,17 +60,13 @@ class Game:
             pelissä on tasapelitilanne, muussa tapauksessa False.
         """
 
-        finished = False
         if board.check_win() is True and turn == 2:
             print("Peli loppui!", self.player1.name, "voitti! \n")
-            finished = True
-            return finished
+            return True
         if board.check_win() is True and turn == 1:
             print("Peli loppui!", self.player2.name, "voitti! \n")
-            finished = True
-            return finished
+            return True
         if board.check_full() is True and board.check_win() is False:
             print("Peli loppui! Tasapeli!")
-            finished = True
-            return finished
-        return finished
+            return True
+        return False
