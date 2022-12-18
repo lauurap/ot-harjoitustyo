@@ -21,7 +21,7 @@ class GameRepository:
         """Tallentaa pelaajat, pelilaudan ja seuraavana vuorossa olevan pelaajan vuoron.
         """
 
-        with open("stored_games.txt", "w") as file:
+        with open("stored_games.txt", "w", encoding='UTF-8') as file:
             board = ""
             for i in range(10):
                 board += str(numbers[i])
@@ -39,7 +39,7 @@ class GameRepository:
             Listan, jossa on pelaajien nimet, pelilauta ja pelivuoro.
         """
 
-        with open("stored_games.txt", "r") as file:
+        with open("stored_games.txt", "r", encoding='UTF-8') as file:
             name1 = file.readline().strip()
             name2 = file.readline().strip()
             board = file.readline().strip()
