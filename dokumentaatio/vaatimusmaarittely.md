@@ -1,27 +1,28 @@
 # Vaatimusmäärittely
-Teen ristinolla-pelin.
-Tarkoitus on tehdä ristinolla ensin vakiokokoisella pelilaudalla 3x3 TEHTY, 
-ja mahdollisesti laajentaa sitä toimimaan mielivaltaisella pelilaudalla.
+
+## Sovelluksen tarkoitus
+Kyseessä on perinteinen ristinolla-peli, jota voi pelata konetta vastaan tai toista ihmiskäyttäjää vastaan. Pelissä on
+tarkoitus saada sama merkki 3 kertaa peräkkäin joko vaaka-, pysty- tai diagonaalisessa suunnassa.
+
 
 ## Käyttäjiä ovat:
-- Ihmiskäyttäjä TEHTY
-- Konekäyttäjä (jolloin peliä voi pelata konetta vastaan) TEHTY
+- Ihmiskäyttäjä
+- Konekäyttäjä (jolloin peliä voi pelata konetta vastaan)
 
 ## Käyttöliittymä:
-Pelissä on vain 1 näkymä, joka näkyy samanaikaisesti kummallekkin pelaajalle. TEHTY
+Pelissä on vain 1 näkymä eli pelilauta, joka näkyy samanaikaisesti kummallekkin pelaajalle. 
 
 ## Toiminnallisuudet:
 ### Ihmiskäyttäjä:
-	(- valitsee pelilaudan koon)
-	- valitsee vastustajan (toinen ihminen / kone) TEHTY
-	- valitsee omat siirtonsa TEHTY
-	- mahdollisuus keskeyttää peli ja jatkaa sitä myöhemmin (tallennus) TEHTY
+	- valitsee vastustajan (toinen ihminen / kone) 
+	- valitsee omat siirtonsa 
+	- mahdollisuus tallentaa peli ja jatkaa sitä myöhemmin
 
 ### Konekäyttäjä:
-	- valitsee randomilla siirtonsa TEHTY (mahdollisesti valitsee "järkevästi" siirtonsa)
-
+	- valitsee randomilla siirtonsa
 
 ## Jatkokehitysideoita:
-- mahdollisuus valita pelilaudan koko
-- konekäyttäjä voi tehdä järkeviä siirtoja randomien siirtojen sijaan
+- mahdollisuus valita pelilaudan koko muutamasta eri vaihtoehdosta
+- kun peli loppuu, olisi mahdollisuus aloittaa uusi peli. Tulokset voisi tallentaa ja voittaja olisi se, joka
+voittaisi eniten pelejä esim. kymmenestä pelistä.
 - tallennettuja pelejä voi olla useampi
