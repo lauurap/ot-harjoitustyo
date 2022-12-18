@@ -13,7 +13,7 @@ class Game:
         numberstring: Laudalla alkutilanteessa olevat numerot/merkit
     """
 
-    def __init__(self, name1, name2, turn, numberstring):
+    def __init__(self, name1, name2, turn, number_string):
         """Luokan konstruktori, joka luo uuden pelin.
 
         Args:
@@ -23,7 +23,7 @@ class Game:
             turn: Vuoro, joka määrittää kumpi pelaaja pelaa
         """
 
-        self.board = Board(name1, name2, numberstring)
+        self.board = Board(name1, name2, number_string)
         self.player1 = HumanPlayer(name1, 'X')
         if name2 == "Kone":
             self.player2 = ComputerPlayer(name2, 'O')

@@ -10,7 +10,7 @@ class Board:
         numbersting: Laudalla alkutilanteessa olevat numerot/merkit
     """
 
-    def __init__(self, name1, name2, numberstring):
+    def __init__(self, name1, name2, number_string):
         """Luokan konstruktori, joka luo uuden laudan pelin
         alussa tai jatkettaessa tallennettua peliä.
 
@@ -20,18 +20,18 @@ class Board:
                 name2: Pelaajan 2 nimi
         """
 
-        self.numbers = self.numberstring_to_numbers(numberstring)
+        self.numbers = self.number_string_to_numbers(number_string)
         print("Tässä on pelilauta: \n")
         self.print_board()
         self.name1 = name1
         self.name2 = name2
 
-    def numberstring_to_numbers(self, numberstring) -> list:
+    def number_string_to_numbers(self, number_string) -> list:
         """Muuttaa laudalla olevat numerot/merkit
         string-muodosta listaksi.
 
         Args:
-                numberstring: Laudalla alussa olevat
+                number_string: Laudalla alussa olevat
                 numerot/merkit string-muodossa.
 
         Returns:
@@ -40,7 +40,7 @@ class Board:
 
         numbers = [" "]
         for i in range(9):
-            numbers.append(numberstring[i])
+            numbers.append(number_string[i])
         return numbers
 
     def print_board(self) -> None:
