@@ -16,13 +16,18 @@ Harjoitustyö on testattu Python 3.8 -versiolla
 
 ### Dokumentaatio
 
-[changelog.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+[Käyttöohje](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
-[tyoaikakirjanpito.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+[Vaatimusmäärittely](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[vaatimusmaarittely.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Arkkitehtuurikuvaus](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[arkkitehtuuri.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+Testausdokumentti
+
+[Työaikakirjanpito](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+[Changelog](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
 
 ### Asennus
 
