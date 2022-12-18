@@ -17,3 +17,7 @@
 
 ## Viikko 6
 - Tallennus: pelin voi tallentaa ja sitä voi jatkaa myöhemmin
+
+## Viikko 7
+- Peli ei kaadu, jos kysyttäessä pelaako konetta vastaan vastaa jotain muuta kuin ei/kyllä
+- Tallennuksen voi nollata suorittamalla python src/build.py
