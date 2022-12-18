@@ -61,6 +61,9 @@ class TestBoard(unittest.TestCase):
         self.board.set_mark('X', 7)
         self.assertEqual(self.board.check_win(), True)
 
+    def test_check_win_returns_false_if_not_win(self):
+        self.assertEqual(self.board.check_win(), False)
+
     def test_constructor_set_mark_correct(self):
         self.assertEqual(self.board.set_mark('X', 7), True)
 
