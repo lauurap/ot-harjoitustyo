@@ -19,5 +19,6 @@
 | 10.12 | 4 | tallennus |
 | 11.12 | 4 | tallennus ja docstring, käyttöohje |
 | 13.12 | 2 | arkkitehtuuri |
+| 18.12 | 3 | testejä, dokumentaatio |
 
-Aika yht 47,5
+Aika yht 50,5
