@@ -42,7 +42,7 @@ Lataa loppupalautus release zip-tiedosto ja pura se. Tee seuraavat komennot kome
 poetry install
 ```
  
-2. Suorita talletun pelin tyhjennys:
+2. Suorita tallennetun pelin tyhjennys:
 ```bash
 poetry run invoke empty
 ```
@@ -60,7 +60,7 @@ Pelin voi käynnistää komennolla:
 
 ```bash
 poetry run invoke start
-``
+```
 
 ### Testaus
 
