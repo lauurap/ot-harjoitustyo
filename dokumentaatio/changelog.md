@@ -20,4 +20,4 @@
 
 ## Viikko 7
 - Peli ei kaadu, jos kysyttäessä pelaako konetta vastaan vastaa jotain muuta kuin ei/kyllä
-- Tallennuksen voi nollata suorittamalla python src/build.py
+- Tallennuksen voi nollata suorittamalla python src/empty.py
