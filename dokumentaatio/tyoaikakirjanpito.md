@@ -20,5 +20,6 @@
 | 11.12 | 4 | tallennus ja docstring, käyttöohje |
 | 13.12 | 2 | arkkitehtuuri |
 | 18.12 | 3 | testejä, dokumentaatio |
+| 19.12 | 1 | README | 
 
-Aika yht 50,5
+Aika yht 51,5
