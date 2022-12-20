@@ -10,7 +10,7 @@ class Board:
         numbersting: Laudalla alkutilanteessa olevat numerot/merkit
     """
 
-    def __init__(self, name1, name2, numberstring):
+    def __init__(self, name1, name2, number_string):
         """Luokan konstruktori, joka luo uuden laudan pelin
         alussa tai jatkettaessa tallennettua peliä.
 
@@ -20,18 +20,18 @@ class Board:
                 name2: Pelaajan 2 nimi
         """
 
-        self.numbers = self.numberstring_to_numbers(numberstring)
+        self.numbers = self.number_string_to_numbers(number_string)
         print("Tässä on pelilauta: \n")
         self.print_board()
         self.name1 = name1
         self.name2 = name2
 
-    def numberstring_to_numbers(self, numberstring):
+    def number_string_to_numbers(self, number_string) -> list:
         """Muuttaa laudalla olevat numerot/merkit
         string-muodosta listaksi.
 
         Args:
-                numberstring: Laudalla alussa olevat
+                number_string: Laudalla alussa olevat
                 numerot/merkit string-muodossa.
 
         Returns:
@@ -40,10 +40,10 @@ class Board:
 
         numbers = [" "]
         for i in range(9):
-            numbers.append(numberstring[i])
+            numbers.append(number_string[i])
         return numbers
 
-    def print_board(self):
+    def print_board(self) -> None:
         """Tulostaa pelilaudan.
         """
 
@@ -54,7 +54,7 @@ class Board:
         print(" ", self.numbers[7], "|", self.numbers[8], "|", self.numbers[9])
         print(" ")
 
-    def check_place_free(self, place, turn):
+    def check_place_free(self, place, turn) -> bool:
         """Tarkistaa, onko paikka kelvollinen.
 
         Jos paikaksi annetaan t, ohjelma suorittaa tallennuksen.
@@ -67,26 +67,25 @@ class Board:
                 ole merkkiä, muussa tapauksessa False.
         """
 
-        free = False
         if place == "t":
             game_repository = GameRepository(self.name1, self.name2)
             game_repository.store(self.numbers, turn)
-            return free
+            print("Tallennus onnistui")
+            return False
         try:
             place = int(place)
         except ValueError:
             print("Merkin tulee olla numero!")
-            return free
+            return False
         if int(place) < 1 or int(place) > 9:
             print("Merkki tulee asettaa johonkin ruuduista 1-9!")
-            return free
+            return False
         if self.numbers[int(place)] == 'X' or self.numbers[int(place)] == 'O':
             print("Merkki tulee asettaa vapaalle ruudulle!")
-            return free
-        free = True
-        return free
+            return False
+        return True
 
-    def set_mark(self, mark, place):
+    def set_mark(self, mark, place) -> bool:
         """Asettaa pelaajan merkin pelilaudalle pelaajan haluamaan paikkaan
 
         Returns:
@@ -99,7 +98,7 @@ class Board:
             return True
         return False
 
-    def check_win(self):
+    def check_win(self) -> bool:
         """Tarkastaa, onko laudalla kolme samaa merkkiä vaaka-,
         pysty- tai diagonaalisessa suunnassa.
 
@@ -108,19 +107,18 @@ class Board:
                 pysty- tai diagonaalisessa suunnassa, muutoin False.
         """
 
-        win = False
         for i in range(3):
             if self.numbers[i*3+1] == self.numbers[i*3+2] == self.numbers[i*3+3]:
-                win = True
+                return True
             if self.numbers[i+1] == self.numbers[i+1+3] == self.numbers[i+1+6]:
-                win = True
+                return True
         if self.numbers[1] == self.numbers[5] == self.numbers[9]:
-            win = True
+            return True
         if self.numbers[3] == self.numbers[5] == self.numbers[7]:
-            win = True
-        return win
+            return True
+        return False
 
-    def check_full(self):
+    def check_full(self) -> bool:
         """Tarkastaa, onko laudalla jokaisessa paikassa X tai O.
 
         Return:
@@ -129,10 +127,9 @@ class Board:
         """
 
         marks = 0
-        full = False
         for i in range(10):
             if self.numbers[i] == 'O' or self.numbers[i] == 'X':
                 marks += 1
         if marks == 9:
-            full = True
-        return full
+            return True
+        return False

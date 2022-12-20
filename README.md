@@ -1,42 +1,92 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-## Ristinolla
+# Ristinolla
 
-Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa. 
-Pelaaja voi valita, pelaako hän konetta vai toista ihmispelaajaa vastaan. 
-Tallennusmahdollisuus on myös tulossa.
+Ristinolla-pelissä pelaajien on mahdollista pelata perinteistä ristinollaa. Pelin tarkoitus
+on saada pelilaudalle kolme omaa merkkiä peräkkäin joko vaaka-, pysty- tai diagonaalisessa
+suunnassa. Pelaaja voi valita, pelaako hän konetta vai toista ihmispelaajaa vastaan. 
+Pelin pystyy tallentamaan ja jatkamaan myöhemmin.
+
+[Loppupalautus release]()
+
+[Viikon 6 release](https://github.com/lauurap/ot-harjoitustyo/releases/tag/viikko6)
 
 [Viikon 5 release](https://github.com/lauurap/ot-harjoitustyo/releases/tag/viikko5)
 
-### Python-versio
+## Python-versio
 
-Harjoitustyö on testattu Python 3.8 -versiolla
+Peli on testattu Python 3.8 -versiolla. Pelin toimivuus on testattu
+laitoksen koneella käyttämällä etätyöpöytää. 
 
-### Dokumentaatio
+## Dokumentaatio
 
-[changelog.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md)
+- [Käyttöohje](./dokumentaatio/kayttoohje.md)
 
-[tyoaikakirjanpito.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+- [Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 
-[vaatimusmaarittely.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+- [Arkkitehtuurikuvaus](./dokumentaatio/arkkitehtuuri.md)
 
-[arkkitehtuuri.md](https://github.com/lauurap/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+- [Testausdokumentti](./dokumentaatio/testaus.md)
 
-### Asennus
+- [Työaikakirjanpito](./dokumentaatio/tyoaikakirjanpito.md)
 
-1. poetry install asentaa riippuvuudet
+- [Changelog](./dokumentaatio/changelog.md)
+
+
+## Asennus
+
+Lataa loppupalautus release zip-tiedosto ja pura se. Tee seuraavat komennot komentorivillä:
+
+1. Asenna riippuvuudet:
+```bash
+poetry install
+```
  
-2. poetry run invoke start käynnistää ristinolla-pelin
+2. Suorita tallennetun pelin tyhjennys:
+```bash
+poetry run invoke empty
+```
 
-### Komentorivitoiminnot
+3. Käynnistä peli:
+```bash
+poetry run invoke start
+```
 
-1. poetry run invoke start käynnistää ristinolla-pelin
+## Komentorivitoiminnot
 
-2. poetry run invoke test suorittaa testit
+### Pelin käynnistäminen
 
-3. poetry run invoke coverage-report kerää testikattavuuden ja muodostaa HTML-raportin
+Pelin voi käynnistää komennolla:
 
-4. poetry run invoke lint suorittaa .pylintrc:n tarkistukset
+```bash
+poetry run invoke start
+```
+
+### Testaus
+
+Testit voi suorittaa komennolla:
+
+```bash
+poetry run invoke test
+```
+
+### Testikattavuus
+
+Testikattavuusraportin voi generoida komennolla:
+
+```bash
+poetry run invoke coverage-report
+```
+
+Testikattavuusraportti löytyy _htmlcov_-hakemiston _index.html_-tiedostosta.
+
+### Pylint
+
+[.pylintrc](./.pylintrc) määrittelemät tarkistukset voi suorittaa komennolla:
+
+```bash
+poetry run invoke lint
+```
 
 
 

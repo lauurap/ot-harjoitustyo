@@ -3,6 +3,11 @@ from invoke import task
 @task
 def start(ctx):
 	ctx.run("python3 src/index.py", pty=True)
+
+@task
+def empty(ctx):
+	ctx.run("python3 src/empty.py", pty=True)
+
 @task
 def test(ctx):
 	ctx.run("pytest src", pty=True)
@@ -16,5 +21,9 @@ def coverage_report(ctx):
 	ctx.run("coverage html", pty=True)
 
 @task
+def autopep(ctx):
+	ctx.run("autopep8 --in-place --recursive src", pty=True)
+
+@task(autopep)
 def lint(ctx):
 	ctx.run("pylint src", pty=True)

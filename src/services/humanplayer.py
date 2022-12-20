@@ -17,16 +17,16 @@ class HumanPlayer:
         self.name = name
         self.mark = mark
 
-    def do_turn(self, board, place):
+    def do_turn(self, board, place) -> bool:
         """Asettaa merkin pelilaudalle.
 
         Returns:
             True, jos merkin asetus onnistuu, muussa tapauksessa False.
         """
-        success = board.set_mark(self.mark, place)
-        return success
 
-    def ask_place(self, board, turn):
+        return board.set_mark(self.mark, place)
+
+    def ask_place(self, board, turn) -> int:
         """Kysyy pelaajalta, mihin pelaaja haluaa asettaa merkin.
 
         Args:
@@ -43,7 +43,7 @@ class HumanPlayer:
             correct_place = board.check_place_free(place, turn)
         return int(place)
 
-    def do_turns(self, board, turn):
+    def do_turns(self, board, turn) -> None:
         """Vastaa paikan kysymisestä ja pelivuoron suorittamisesta.
         """
 

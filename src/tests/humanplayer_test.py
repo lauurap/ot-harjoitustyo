@@ -9,13 +9,11 @@ class TestHumanplayer(unittest.TestCase):
         self.humanplayer = HumanPlayer("Matti", 'X')
 
     def test_constructor_set_name_correct(self):
-        humanplayer = HumanPlayer("Matti", "X")
-        self.assertEqual(humanplayer.name, "Matti")
-
-    def test_constructor_set_mark_correct(self):
-        humanplayer = HumanPlayer("Matti", "X")
-        self.assertEqual(humanplayer.mark, "X")
+        self.assertEqual(self.humanplayer.name, "Matti")
 
     def test_constructor_do_turn_correct(self):
-
         self.assertEqual(self.humanplayer.do_turn(self.board, 1), True)
+
+    def test_constructor_do_turn_returns_false_if_place_not_correct(self):
+        self.board.set_mark('X', 1)
+        self.assertEqual(self.humanplayer.do_turn(self.board, 1), False)

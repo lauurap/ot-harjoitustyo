@@ -61,6 +61,9 @@ class TestBoard(unittest.TestCase):
         self.board.set_mark('X', 7)
         self.assertEqual(self.board.check_win(), True)
 
+    def test_check_win_returns_false_if_not_win(self):
+        self.assertEqual(self.board.check_win(), False)
+
     def test_constructor_set_mark_correct(self):
         self.assertEqual(self.board.set_mark('X', 7), True)
 
@@ -70,9 +73,16 @@ class TestBoard(unittest.TestCase):
     def test_place_need_be_number(self):
         self.assertEqual(self.board.check_place_free("a", 1), False)
 
-    def test_constructor_not_set_mark_if_place_not_free(self):
+    def test_check_place_free_returns_false_if_not_free(self):
         self.board.set_mark('X', 3)
         self.assertEqual(self.board.check_place_free(3, 1), False)
+
+    def test_check_place_free_store_if_place_t(self):
+        self.assertEqual(self.board.check_place_free("t", 1), False)
+
+    def test_constructor_not_set_mark_if_place_not_free(self):
+        self.board.set_mark('X', 3)
+        self.assertEqual(self.board.set_mark('X', 3), False)
 
     def test_place_is_free(self):
         self.assertEqual(self.board.check_place_free(3, 1), True)
@@ -86,7 +96,7 @@ class TestBoard(unittest.TestCase):
             self.board.set_mark('X', i)
         self.assertEqual(self.board.check_full(), True)
 
-    def test_board_full_if_not_full(self):
+    def test_check_full_returns_false_if_not_full(self):
         for i in range(1, 9):
             self.board.set_mark('X', i)
         self.assertEqual(self.board.check_full(), False)

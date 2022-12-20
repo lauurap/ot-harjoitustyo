@@ -17,11 +17,11 @@ class GameRepository:
         self.name1 = name1
         self.name2 = name2
 
-    def store(self, numbers, turn):
+    def store(self, numbers, turn) -> None:
         """Tallentaa pelaajat, pelilaudan ja seuraavana vuorossa olevan pelaajan vuoron.
         """
 
-        with open("stored_games.txt", "w") as file:
+        with open("stored_games.txt", "w", encoding='UTF-8') as file:
             board = ""
             for i in range(10):
                 board += str(numbers[i])
@@ -29,9 +29,8 @@ class GameRepository:
             file.write(self.name2 + "\n")
             file.write(board + "\n")
             file.write(str(turn))
-        print("Tallennus onnistui")
 
-    def read(self):
+    def read(self) -> list:
         """Lukee tiedostosta tallenetun pelin palaajat, pelilaudan
         ja seuraavana vuorossa olevan pelaajan vuoron.
 
@@ -39,7 +38,7 @@ class GameRepository:
             Listan, jossa on pelaajien nimet, pelilauta ja pelivuoro.
         """
 
-        with open("stored_games.txt", "r") as file:
+        with open("stored_games.txt", "r", encoding='UTF-8') as file:
             name1 = file.readline().strip()
             name2 = file.readline().strip()
             board = file.readline().strip()
