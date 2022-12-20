@@ -4,6 +4,9 @@
 
 ### Sovelluslogiikka
 
+Sovelluslogiikasta vastaavat Board-, Computerplayer-, Humanplayer- ja Game-luokat testataan
+vastaavissa TestBoard-, TestComputerplayer-, TestHumanplayer ja TestGame-luokilla. 
+
 ### Repositorio-luokka
 
 ### Testauskattavuus
