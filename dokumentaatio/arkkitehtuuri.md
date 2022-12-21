@@ -6,8 +6,8 @@ Koodin pakkausrakenne on alla:
 
 ![](./kuvat/pakkausrakenne1.PNG)
 
-Pakkaus ui sisältää käyttöliittymän koodin ja services sisältää sovelluslogiikan koodin, eli luokat Game, Board, 
-Humanplayer ja Computerplayer. Repositories vastaa tietojen tallentamisen tiedostoon ja tietojen lukemisen tiedostosta.
+Pakkaus _ui_ sisältää käyttöliittymän koodin ja _services_ sisältää sovelluslogiikan koodin, eli luokat Game, Board, 
+Humanplayer ja Computerplayer. _Repositories_ vastaa tietojen tallentamisen tiedostoon ja tietojen lukemisen tiedostosta.
 
 ## Käyttöliittymä
 
@@ -33,10 +33,10 @@ kutsuu pelaamisessa Board-, Humanplayer- ja Computerplayer-luokan metodeja. Alla
           name2
           numberstring
           numbers
-          numberstring_to_numbers()
+          numberstring_to_numbers(number_string)
           print_board()
-          check_place_free()
-          set_mark()
+          check_place_free(place, turn)
+          set_mark(mark, place)
           check_win()
           check_board_full()
 
@@ -47,24 +47,19 @@ kutsuu pelaamisessa Board-, Humanplayer- ja Computerplayer-luokan metodeja. Alla
           turn
           numberstring
           play_game()
-          game_is_finished()
+          game_is_finished(turn, board)
       }
       class Humanplayer{
           name
           mark
-          do_turn()
+          do_turn(board, place)
+          ask_place(board, turn)
+          do_turns(board, turn)
       }
       class Computerplayer{
           name
           mark
-          do_turn()
-          ask_place()
-          do_turns()
-      }
-      class Player{
-          name
-          mark
-          do_turn()
+          do_turn(board)
       }
 ```
 
