@@ -1,12 +1,24 @@
 # Käyttöohje
 
-Lataa viimeisen release tästä... (Lisätään kun ohjelma valmis!)
+Lataa [loppupalautus](https://github.com/lauurap/ot-harjoitustyo/releases) -nimisen 
+releasen lähdekoodi (_Source code_) ja pura kyseinen zip-tiedosto. 
 
 ## Ohjelman käynnistäminen
 
-1. poetry install asentaa riippuvuudet
+1. Asenna riippuvuudet:
+```bash
+poetry install
+```
  
-2. poetry run invoke start käynnistää ristinolla-pelin
+2. Suorita tallennetun pelin tyhjennys:
+```bash
+poetry run invoke empty
+```
+
+3. Käynnistä peli:
+```bash
+poetry run invoke start
+```
 
 
 ## Aloitusvalikko
@@ -25,8 +37,8 @@ toista ihmistä vastaan.
 
 ![](./kuvat/pelaajiensyotto.PNG)
 
-Tämän jälkeen aletaan syöttämään numeroita 1-9 sen mukaan, mihin paikkaan
-pelilaudalle pelaaja haluaa merkkinsä asettaa.
+Tämän jälkeen aletaan syöttämään numeroita 1-9 sen mukaan, mihin paikkaan pelilaudalle
+vuorossa olevaa pelaaja haluaa merkkinsä asettaa.
 
 ## Pelin tallentaminen
 
