@@ -3,45 +3,58 @@ from repositories.game_repository import GameRepository
 
 
 class TicTacToe:
+    """Sovelluksen käynnistämisesta ja käyttöliittymästä vastaava luokka"""
+
     def __init__(self):
+        """Luokan konstruktori"""
+
         pass
 
     def create_game(self) -> None:
+        """Näyttää aloitusvalikon"""
+
         COMMANDS = {
             "l": "l Lopeta",
             "a": "a Aloita uusi peli",
             "j": "j Jatka aiempaa peliä",
         }
-        MENU = "a: Aloita uusi peli \nj: Jatka aiempaa peliä \nl: Lopeta peli \n"
+        menu = "a: Aloita uusi peli \nj: Jatka aiempaa peliä \nl: Lopeta peli \n"
         print("Tervetuloa pelaamaan ristinollaa! \n \n")
-        print(MENU)
+        print(menu)
         started = False
         while started is False:
             command = input("Anna komento: \n")
             if not command in COMMANDS:
                 print("Anna jokin seuraavista komennoista: \n")
-                print(MENU)
+                print(menu)
             if command == "l":
                 break
             if command == "a":
                 self.start_game()
                 started = True
             elif command == "j":
-                game_repository = GameRepository(" ", " ")
-                list = game_repository.read()
-                name1 = list[0]
-                name2 = list[1]
-                numberstring = list[2]
-                turn = list[3]
-                if name1 not in " ":
-                    game = Game(name1, name2, turn, numberstring)
-                    print("\nJatketaan tallennettua peliä!\n")
-                    game.play_game()
-                    started = True
-                else:
-                    print("Ei tallennettua peliä")
+                self.continue_game()
+                started = True
+
+    def continue_game(self) -> None:
+        """Lukee tiedostosta tallennetun pelin tiedot ja aloittaa uuden pelin kyseisillä tiedoilla"""
+
+        game_repository = GameRepository(" ", " ")
+        list = game_repository.read()
+        name1 = list[0]
+        name2 = list[1]
+        numberstring = list[2]
+        turn = list[3]
+        if name1 not in " ":
+            game = Game(name1, name2, turn, numberstring)
+            print("\nJatketaan tallennettua peliä!\n")
+            game.play_game()
+        else:
+            print("Ei tallennettua peliä")
 
     def start_game(self) -> None:
+        """Aloittaa uuden pelin"""
+
         create_name = False
         while create_name is False:
             name1 = input("Anna pelaajan 1 nimi ")
