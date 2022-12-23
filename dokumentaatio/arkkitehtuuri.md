@@ -103,7 +103,12 @@ pelaa keskenään.
           HumanPlayer -->> Game : True
           Game --> Game : change turn
       end
-
-
-
 ```
+Eli kun pelaaja on valinnut pelaavansa peliä toista ihmispelaajaa vastaan ja kun molemmat ovat
+syöttäneet nimensä, luodaan uusi Game- ja Board-olio. Game-luokan play_game-metodi vastaa pelin
+pyörimisestä. play_game-metodissa suoritetaan Humanplayer-luokan do_turns-, ask_place_ ja do_turn 
+-metodit, joissa kysytään, minne pelaaja haluaa merkin asettaa ja jos asetus on validi, suoritetaan
+merkin asetus. Asetuksen validius tarkistetaan Board-luokan check_place_free -metodilla ja 
+merkin asetus set_mark -metodilla. Tämän jälkeen vuoro vaihtuu ja sama toistuu. Jokaisen
+vuoron jälkeen Game-luokassa tarkastetaan game_is_finished -metodilla, jatkuuko peli vielä. 
+ 
