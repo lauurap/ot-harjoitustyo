@@ -23,5 +23,6 @@
 | 19.12 | 1 | README | 
 | 20.12 | 2 | dokumentaatio |
 | 21.12 | 1 | arkkitehtuuri |
+| 22.12 | 1 | dokumentaatio
 
-Aika yht 54,5
+Aika yht 55,5

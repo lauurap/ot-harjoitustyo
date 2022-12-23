@@ -110,5 +110,6 @@ pyörimisestä. play_game-metodissa suoritetaan Humanplayer-luokan do_turns-, as
 -metodit, joissa kysytään, minne pelaaja haluaa merkin asettaa ja jos asetus on validi, suoritetaan
 merkin asetus. Asetuksen validius tarkistetaan Board-luokan check_place_free -metodilla ja 
 merkin asetus set_mark -metodilla. Tämän jälkeen vuoro vaihtuu ja sama toistuu. Jokaisen
-vuoron jälkeen Game-luokassa tarkastetaan game_is_finished -metodilla, jatkuuko peli vielä. 
+vuoron jälkeen Game-luokassa tarkastetaan game_is_finished -metodilla, jatkuuko peli vielä vai
+onko jompikumpi pelaaja voittanut tai peli päättynyt tasapeliin. 
  
