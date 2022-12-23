@@ -68,6 +68,19 @@ kutsuu pelaamisessa Board-, Humanplayer- ja Computerplayer-luokan metodeja. Alla
 Pakkauksen repositories luokka GameRepository vastaa pelin tallentamisesta. GameRepositoryn metodi store tallentaa pelin
 pelaajat, vuorossa olevan pelaajan ja pelilaudan tiedostoon. GameRepositoryn metodi read lukee tiedostosta vastaavat tiedot. 
 
+### Tiedostot
+
+Peli tallettaa pelaajien nimet, pelilaudan ja vuorossa olevan pelaajan tiedot erilliseen
+tekstitiedostoon seuraavassa formaatissa:
+```bash
+name1
+name2
+ 123456789
+1
+```
+Seuraava vuorossa olevaa pelaaja kuvataan joko numerolla 1 tai 2. 1 tarkoittaa, että ensimmäisenä
+nimensä antanut pelaaja pelaa seuraavaksi. 
+
 ## Toiminnallisuus
 
 ### Uuden pelin aloittaminen
