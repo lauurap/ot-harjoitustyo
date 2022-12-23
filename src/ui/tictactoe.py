@@ -33,10 +33,9 @@ class TicTacToe:
                 self.start_game()
                 started = True
             elif command == "j":
-                self.continue_game()
-                started = True
+                started = self.continue_game()
 
-    def continue_game(self) -> None:
+    def continue_game(self) -> bool:
         """Lukee tiedostosta tallennetun pelin tiedot ja aloittaa uuden pelin kyseisillä tiedoilla"""
 
         game_repository = GameRepository(" ", " ")
@@ -49,8 +48,10 @@ class TicTacToe:
             game = Game(name1, name2, turn, numberstring)
             print("\nJatketaan tallennettua peliä!\n")
             game.play_game()
+            return True
         else:
             print("Ei tallennettua peliä")
+            return False
 
     def start_game(self) -> None:
         """Aloittaa uuden pelin"""
@@ -64,10 +65,10 @@ class TicTacToe:
                 create_name = True
         other_player = False
         while other_player is False:
-            response = input("Pelaatko konetta vastaan? ei/kyllä ")
-            if response not in ("kyllä", "ei"):
-                print("Kirjoita joko ei tai kyllä")
-            if response == "ei":
+            response = input("Pelaatko konetta vastaan? e/k ")
+            if response not in ("k", "e"):
+                print("Kirjoita joko e (=ei) tai k (=kyllä)")
+            if response == "e":
                 create_name2 = False
                 while create_name2 is False:
                     name2 = input("Anna pelaajan 2 nimi ")
@@ -79,7 +80,7 @@ class TicTacToe:
                 print("Tervetuloa pelaamaan",
                       name1, "ja", name2, "!\n")
                 other_player = True
-            if response == "kyllä":
+            if response == "k":
                 name2 = "Kone"
                 other_player = True
         game = Game(name1, name2, "1", "123456789")
