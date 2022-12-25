@@ -40,7 +40,9 @@ toista ihmistä vastaan kirjoittamalla joko e (=ei) tai k (=kyllä).
 ![](./kuvat/pelaajiensyotto.PNG)
 
 Tämän jälkeen aletaan syöttämään numeroita 1-9 sen mukaan, mihin paikkaan pelilaudalle
-vuorossa olevaa pelaaja haluaa merkkinsä asettaa.
+vuorossa olevaa pelaaja haluaa merkkinsä asettaa. Tarkoitus on saada sama merkki 3 
+kertaa peräkkäin joko vaaka-, pysty- tai diagonaalisessa suunnassa.
+
 
 ## Pelin tallentaminen
 
