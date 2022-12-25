@@ -34,8 +34,8 @@ Peli aloitetaan kirjoittamalla haluttu komento komentoriville.
 ## Pelin pelaaminen
 
 Jos halutaan aloittaa uusi peli, aloitusvalikkoon syötetään a komentoriville.
-Tämän jälkeen syötetään ensimmäisen pelaajan nimi ja valitaan pelataanko konetta vai
-toista ihmistä vastaan kirjoittamalla joko e (=ei) tai k (=kyllä).
+Tämän jälkeen syötetään ensimmäisen pelaajan nimi ja valitaan pelataanko konetta vastaan 
+kirjoittamalla joko e (=ei) tai k (=kyllä).
 
 ![](./kuvat/pelaajiensyotto.PNG)
 
