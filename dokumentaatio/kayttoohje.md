@@ -1,9 +1,11 @@
 # Käyttöohje
 
 Lataa [loppupalautus](https://github.com/lauurap/ot-harjoitustyo/releases) -nimisen 
-releasen lähdekoodi (_Source code_) ja pura kyseinen zip-tiedosto. 
+releasen lähdekoodi (_Source code_) ja pura kyseinen zip. 
 
 ## Ohjelman käynnistäminen
+
+Avaa komentorivi äsken ladatussa hakemistossa ja suorita seuraavat komennot:
 
 1. Asenna riippuvuudet:
 ```bash

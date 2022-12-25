@@ -7,7 +7,7 @@ on saada pelilaudalle kolme omaa merkkiä peräkkäin joko vaaka-, pysty- tai di
 suunnassa. Pelaaja voi valita, pelaako hän konetta vai toista ihmispelaajaa vastaan. 
 Pelin pystyy tallentamaan ja jatkamaan myöhemmin.
 
-[Loppupalautus release]()
+[Loppupalautus release](https://github.com/lauurap/ot-harjoitustyo/releases/tag/loppupalautus)
 
 [Viikon 6 release](https://github.com/lauurap/ot-harjoitustyo/releases/tag/viikko6)
 
