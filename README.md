@@ -80,6 +80,11 @@ poetry run invoke coverage-report
 
 Testikattavuusraportti löytyy _htmlcov_-hakemiston _index.html_-tiedostosta.
 
+Huom! Testikattavuusraportti toimii omalla koneellani ja olen testannut sitä myös pushaamalla 
+etätyöpöydälle. Releasen testaaminen jäi viimeiseen päivään, (koska luulin, että jos pushaaminen 
+toimii, niin myös release toimii), mutta nyt testikattavuusraportti ei toimikaan releasessa. 
+Tämä virhe jää olemaan, sillä flunssaiset aivoni eivät keksineet ongelmaan ratkaisua.
+
 ### Pylint
 
 [.pylintrc](./.pylintrc) määrittelemät tarkistukset voi suorittaa komennolla:
