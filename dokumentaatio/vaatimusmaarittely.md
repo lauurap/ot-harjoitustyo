@@ -22,7 +22,6 @@ Pelissä on vain 1 näkymä eli pelilauta, joka näkyy samanaikaisesti kummallek
 	- valitsee randomilla siirtonsa
 
 ## Jatkokehitysideoita:
-- mahdollisuus valita pelilaudan koko muutamasta eri vaihtoehdosta
 - kun peli loppuu, olisi mahdollisuus aloittaa uusi peli. Tulokset voisi tallentaa ja voittaja olisi se, joka
 voittaisi eniten pelejä esim. kymmenestä pelistä.
 - tallennettuja pelejä voi olla useampi
